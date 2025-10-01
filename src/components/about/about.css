@@ -1,0 +1,44 @@
+.about-section {
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 50px;
+}
+
+.profile-description {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-right: 50px;
+}
+
+.profile-description p {
+    color: white;
+    font-weight: 300;
+}
+
+.key-expertise {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.tab-value {
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    transition: all 0.3s ease;
+}
+
+.tab-value:hover {
+    transform: translateY(-5px);
+}

@@ -2,6 +2,8 @@ import { useState } from 'react'
 import Navbar from './components/navbar/navbar';
 import Hero from './components/hero/hero'
 import SubHero from './components/sub-hero/sub-hero';
+import About from './components/about/about';
+import Skills from './components/skills/skills';
 
 function App() {
 
@@ -10,6 +12,8 @@ function App() {
       <Navbar />
       <Hero/>
       <SubHero />
+      <About />
+      <Skills />
     </>
   )
 }

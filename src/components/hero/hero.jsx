@@ -1,6 +1,10 @@
 import './hero.css';
+import CountUp from '../context/countUp/CountUp';
+
+//assets
 import Logo from '../../assets/pacot-logo.svg';
 import Model from '../../assets/pacot-model.png';
+
 
 function Hero () {
     return (
@@ -12,7 +16,42 @@ function Hero () {
                     textAlign:"center",
                     color:"rgba(255,255,255,0.6)",
                 }}>I specialize in Front-End Development</p>
-                <button>About Me</button>
+
+                <div className='summary-container'>
+                    <div className='summary-box'>
+                        <CountUp
+                            from={0}
+                            to={2}
+                            separator=","
+                            direction="up"
+                            duration={1}
+                            className="count-up-text"
+                        />
+                        <p>Years of Experience</p>
+                    </div>
+                    <div className='summary-box'>
+                        <CountUp
+                            from={0}
+                            to={2}
+                            separator=","
+                            direction="up"
+                            duration={1}
+                            className="count-up-text"
+                        />
+                        <p>Projects Completed</p>
+                    </div>
+                    <div className='summary-box'>
+                        <CountUp
+                            from={0}
+                            to={15}
+                            separator=","
+                            direction="up"
+                            duration={1}
+                            className="count-up-text"
+                        />
+                        <p>Technology Stack</p>
+                    </div>
+                </div>
 
                 <p style={{
                     textAlign:"center",

@@ -24,7 +24,7 @@
     text-align: center;
 }
 
-.hero-section button {
+.hero-section a {
     background-color: transparent;
     padding: 15px 40px;
     border: solid 1px white;
@@ -38,6 +38,37 @@
 
 .hero-section button:hover {
     transform: scale(1.1);
+}
+
+.summary-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    gap: 50px;
+}
+
+.summary-box {
+    background-color: transparent;
+    border: solid 1px rgba(255,255,255,0.5);
+    border-radius: 10px;
+    padding: 20px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.summary-box p {
+    color:rgb(184, 184, 184);
+    font-size: 0.8rem;
+}
+
+.summary-box span {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
 }
 
 @keyframes fadeIn {
