@@ -1,0 +1,50 @@
+.hero-section {
+    width: 100%;
+    height: 100dvh;
+    background-image: url("../../assets/DJI_0217.JPG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    animation: fadeIn 1s ease-in forwards;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.hero-section h1{
+    color: white;
+    font-family: 'Oooh Baby','cursive';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.hero-section button {
+    background-color: transparent;
+    padding: 15px 40px;
+    border: solid 1px white;
+    cursor: pointer;
+    position: relative;
+    top: 30px;
+
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.hero-section button:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
