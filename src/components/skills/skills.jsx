@@ -18,7 +18,7 @@ import Canva from '../../assets/misc/Canva.svg';
 function Skills () {
     return (
         <>
-            <div className='skills-section-grid'>
+            <div className='skills-section-grid' id="skills">
                 <div className='experience'>
                     <p><img src={Business}/>Experience</p>
 

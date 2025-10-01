@@ -18,12 +18,19 @@ function Navbar () {
                     style={{
                        width:"100px",
                        height:"100px",
-                       outline:"solid 3px white",
+                       outline:"solid 5px rgba(25,25,25)",
                        borderRadius:"50%",
-                       position:"relative",
+                       position:"absolute",
                        left:"30px",
-                       top:"30px"
+                       top:"10px"
                     }}/>
+
+                <li className='navigation'>
+                    <a href="#about"><div className="underline" style={{backgroundColor:"white",height:"1px"}}/>About</a>
+                    <a href="#skills"><div className="underline" style={{backgroundColor:"white",height:"1px"}}/>Skills</a>
+                    <a href="#projects"><div className="underline" style={{backgroundColor:"white",height:"1px"}}/>Projects</a>
+                    <a href="#contact"><div className="underline" style={{backgroundColor:"white",height:"1px"}}/>Contact</a>
+                </li>
 
                 <div className='social-media-icons'>
                     <a href="" target="_blank"><img src={Facebook} /></a>
