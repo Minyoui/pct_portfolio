@@ -40,6 +40,10 @@
     transform: scale(1.1);
 }
 
+.title {
+    animation: easeIn 2s ease;
+}
+
 .summary-container {
     display: flex;
     flex-direction: row;
@@ -77,5 +81,17 @@
     }
     to {
         opacity: 1;
+    }
+}
+
+@keyframes easeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        tranform: translateY(0px);
     }
 }

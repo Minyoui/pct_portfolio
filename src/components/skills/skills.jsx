@@ -1,4 +1,5 @@
 import './skills.css';
+import { useState } from 'react';
 
 //assets
 import Business from '../../assets/Business.png';
@@ -16,6 +17,16 @@ import CSS3 from '../../assets/misc/CSS3.svg';
 import Canva from '../../assets/misc/Canva.svg';
 
 function Skills () {
+    const skillsData = [
+        'Communication',
+        'Teamwork',
+        'Creativity',
+        'Leadership',
+        'Programming',
+        'Designing',
+        'Crafting'
+    ];
+
     return (
         <>
             <div className='skills-section-grid' id="skills">
@@ -38,7 +49,13 @@ function Skills () {
                 </div>
                 <div className='skills'>
                     <p><img src={Bulb}/>Skills</p>
-
+                    <div className='skills-grid'>
+                        {skillsData.map((skill, index) => (
+                            <div className='skills-value'>
+                                <p key={index}>{skill}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </>

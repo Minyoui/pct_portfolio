@@ -11,47 +11,12 @@ function Hero () {
         <>
             <div className='hero-section'>
 
-                <h1>Hi! I'm Evane Pacot</h1>
+                <h1 className='title'>Hi! I'm Evane Pacot</h1>
                 <p style={{
                     textAlign:"center",
                     color:"rgba(255,255,255,0.6)",
                 }}>I specialize in Front-End Development</p>
 
-                <div className='summary-container'>
-                    <div className='summary-box'>
-                        <CountUp
-                            from={0}
-                            to={2}
-                            separator=","
-                            direction="up"
-                            duration={1}
-                            className="count-up-text"
-                        />
-                        <p>Years of Experience</p>
-                    </div>
-                    <div className='summary-box'>
-                        <CountUp
-                            from={0}
-                            to={2}
-                            separator=","
-                            direction="up"
-                            duration={1}
-                            className="count-up-text"
-                        />
-                        <p>Projects Completed</p>
-                    </div>
-                    <div className='summary-box'>
-                        <CountUp
-                            from={0}
-                            to={15}
-                            separator=","
-                            direction="up"
-                            duration={1}
-                            className="count-up-text"
-                        />
-                        <p>Technology Stack</p>
-                    </div>
-                </div>
 
                 <p style={{
                     textAlign:"center",

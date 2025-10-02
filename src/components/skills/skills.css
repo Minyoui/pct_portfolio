@@ -61,3 +61,31 @@
 .tech-tools img:hover {
     transform: scale(1.1);
 }
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.skills-value {
+    background-color: white;
+    color:#2b2b2b;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.3s ease;
+}
+
+.skills-value:hover {
+    transform: translateY(-5px);
+}
+
+.skills-value p {
+    font-size: 1rem;
+}

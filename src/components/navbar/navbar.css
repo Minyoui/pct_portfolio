@@ -1,5 +1,5 @@
 .navbar-container {
-    background: rgba(25,25,25);
+    background: #2B2B2B;
     width: 100%;
     height: 70px;
 
@@ -56,4 +56,8 @@
 
 .navigation a:hover .underline{
     width: 100%;
+}
+
+.profile-photo:hover {
+    transform: rotateZ(270deg);
 }

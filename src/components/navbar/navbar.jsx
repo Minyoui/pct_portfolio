@@ -14,11 +14,11 @@ function Navbar () {
     return (
         <>
             <div className='navbar-container'>
-                <img src={Profile} alt="Profile Photo" 
+                <img src={Profile} alt="Profile Photo" className='profile-photo'
                     style={{
                        width:"100px",
                        height:"100px",
-                       outline:"solid 5px rgba(25,25,25)",
+                       outline:"solid 5px #2B2B2B",
                        borderRadius:"50%",
                        position:"absolute",
                        left:"30px",
