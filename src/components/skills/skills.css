@@ -3,8 +3,11 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 20px;
-    padding: 20px;
+    padding: 100px 20px;
     color: white;
+
+    width: 100%;
+    height: fit-content;
 }
 
 .skills-section-grid img {
@@ -56,10 +59,6 @@
     grid: auto auto / auto auto auto auto;
     gap: 10px;
 
-}
-
-.tech-tools img:hover {
-    transform: scale(1.1);
 }
 
 .skills-grid {

@@ -1,4 +1,5 @@
 import './navbar.css';
+import { motion } from "motion/react";
 
 //assets
 import Profile from '../../assets/pacot-model.png';
@@ -11,6 +12,7 @@ import Jobstreet from '../../assets/Jobstreet.svg';
 import LinkedIn from '../../assets/LinkedIn.svg';
 
 function Navbar () {
+
     return (
         <>
             <div className='navbar-container'>
@@ -33,11 +35,47 @@ function Navbar () {
                 </li>
 
                 <div className='social-media-icons'>
-                    <a href="" target="_blank"><img src={Facebook} /></a>
-                    <a href="" target="_blank"><img src={Instagram} /></a>
-                    <a href="" target="_blank"><img src={LinkedIn} /></a>
-                    <a href="" target="_blank"><img src={Jobstreet} /></a>
-                    <a href="" target="_blank"><img src={Github} /></a>
+                    <motion.a
+                        whileHover={{ scale: 1.2 }}
+                        whileTap={{ scale: 0.95 }}
+                        href=""
+                        target="_blank"
+                    >
+                        <img src={Facebook} alt="Facebook"/>
+                    </motion.a>
+                    <motion.a
+                        whileHover={{ scale: 1.2 }}
+                        whileTap={{ scale: 0.95 }}
+                        href=""
+                        target="_blank"
+                    >
+                        <img src={Instagram} alt="Instagram"/>
+                    </motion.a>
+                    <motion.a
+                        whileHover={{ scale: 1.2 }}
+                        whileTap={{ scale: 0.95 }}
+                        href=""
+                        target="_blank"
+                    >
+                        <img src={LinkedIn} alt="LinkedIn"/>
+                    </motion.a>
+                    <motion.a
+                        whileHover={{ scale: 1.2 }}
+                        whileTap={{ scale: 0.95 }}
+                        href=""
+                        target="_blank"
+                    >
+                        <img src={Jobstreet} alt="Jobstreet"/>
+                    </motion.a>
+                    <motion.a
+                        whileHover={{ scale: 1.2 }}
+                        whileTap={{ scale: 0.95 }}
+                        href=""
+                        target="_blank"
+                    >
+                        <img src={Github} alt="Github"/>
+                    </motion.a>
+
                 </div>  
             </div>
         </>

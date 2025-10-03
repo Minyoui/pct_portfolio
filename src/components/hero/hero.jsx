@@ -1,5 +1,5 @@
 import './hero.css';
-import CountUp from '../context/countUp/CountUp';
+import { motion } from "motion/react";
 
 //assets
 import Logo from '../../assets/pacot-logo.svg';
@@ -10,8 +10,13 @@ function Hero () {
     return (
         <>
             <div className='hero-section'>
-
-                <h1 className='title'>Hi! I'm Evane Pacot</h1>
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}      // start state
+                    animate={{ opacity: 1, y: 0 }}       // animate to this state
+                    transition={{ duration: 1 }}       // duration of animation
+                    >
+                    <h1 className='title'>Hi! I'm Evane Pacot</h1>
+                </motion.div>
                 <p style={{
                     textAlign:"center",
                     color:"rgba(255,255,255,0.6)",
