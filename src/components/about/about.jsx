@@ -5,6 +5,12 @@ import Model from '../../assets/pacot-model-two.png';
 import Info from '../../assets/Info.png';
 
 function About () {
+    const expertise = [
+        'HTML5 & CSS3 Expertise',
+        "Performance Optimization",
+        "Responsive Web Design"
+    ];
+
     return (
         <>
             <div className='about-section' id="about">
@@ -24,23 +30,18 @@ function About () {
                         color:"#9c9c9cff"
                     }}>Through my diverse experiences, I have cultivated a strong work ethic and an eagerness to learn and adapt to new challenges. My goal is to contribute meaningfully to projects that blend innovation, aesthetic and functionality. I thrive in environments where I can collaborate with others and continue to grow as a professional.</p>
                     <p style={{fontWeight:"bold",fontSize:"1.2rem"}}>Key Expertise</p>
+
                     <div className='key-expertise'>
-                        <div className='tab-value' style={{
-                            backgroundColor:"#2B2B2B",
-                        }}>
-                            <div style={{height:"10px",width:"10px", backgroundColor:"rgba(25,25,25)",borderRadius:"100%"}}/>HTML5 & CSS3 Expertise
-                        </div>
-                        <div className='tab-value' style={{
-                            backgroundColor:"#2B2B2B",
-                        }}>
-                            <div style={{height:"10px",width:"10px", backgroundColor:"rgba(25,25,25)",borderRadius:"100%"}}/>Performance Optimization
-                        </div>
-                        <div className='tab-value' style={{
-                            backgroundColor:"#2B2B2B",
-                        }}>
-                            <div style={{height:"10px",width:"10px", backgroundColor:"rgba(25,25,25)",borderRadius:"100%"}}/>Responsive Web Design
-                        </div>
+                        {expertise.map((index) => (
+                            <div className='tab-value' key={index} style={{
+                                backgroundColor:"#2B2B2B",
+                            }}>
+                                <div style={{height:"10px",width:"10px", backgroundColor:"rgba(25,25,25)",borderRadius:"100px"}}/>
+                                {index}
+                            </div>
+                        ))}
                     </div>
+
                 </div>
                 <img src={Model} alt="Profile Photo"
                     style={{

@@ -13,7 +13,7 @@ function Projects () {
         {
             id: 'project-one',
             title: 'Maison`D',
-            description: 'A modern website developed to provide an online booking system for a small business. ',
+            description: 'A modern website developed to provide an online booking system for a local spa business. ',
             role: 'Full Stack Developer',
             status: 'Deployed / Live',
             indicator: <div style={{backgroundColor:"#4DB61C",height:"12px",width:"12px",borderRadius:"100px", marginLeft:"8px", boxShadow:"0 1px 10px rgba(77, 219, 84, 0.8)"}}/>,

@@ -26,12 +26,19 @@
     box-shadow: 0 10px 15px rgba(0,0,0,0.3);
 }
 
+.project-box:hover .project-one {
+    filter: grayscale(0);
+}
+
 
 .project-one {
     background-image: url("../../assets/Maison-D-thumbnail.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    filter: grayscale(1);
+
+    transition: filter 0.3s ease;
 }
 
 .project-container {
