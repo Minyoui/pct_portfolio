@@ -81,6 +81,7 @@ function Skills () {
     return (
         <>
             <div className='skills-section-grid' id="skills">
+                <h3 className='skills-header'>Character Information</h3>
                 <div className='experience'>
                     <h1><img src={Business}/>Experience</h1>
                     

@@ -85,6 +85,7 @@ function Projects () {
     return (
         <>
             <div className='projects-section' id="projects">
+                <h3 className='projects-header'>Projects</h3>
                 {projectsData.map((project) => (
                     <a href={project.link} target={project.target} className='project-box' id={project.id} key={project.id}>
                         <img src={ExternalLink} className='link' alt="external link"/>
