@@ -28,7 +28,7 @@ function About () {
                         textAlign:"left",
                         fontSize:"1.5rem",
                         color:"#9c9c9cff"
-                    }}>Through my diverse experiences, I have cultivated a strong work ethic and an eagerness to learn and adapt to new challenges. My goal is to contribute meaningfully to projects that blend innovation, aesthetic and functionality. I thrive in environments where I can collaborate with others and continue to grow as a professional.</p>
+                    }}>Hello Through my diverse experiences, I have cultivated a strong work ethic and an eagerness to learn and adapt to new challenges. My goal is to contribute meaningfully to projects that blend innovation, aesthetic and functionality. I thrive in environments where I can collaborate with others and continue to grow as a professional.</p>
                     <p style={{fontWeight:"bold",fontSize:"1.2rem"}}>Key Expertise</p>
 
                     <div className='key-expertise'>
