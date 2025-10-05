@@ -8,7 +8,7 @@ function SubHero () {
                     borderTopLeftRadius:"0px",
                     borderBottomLeftRadius:"0px",
                 }}>
-                    <p>1.5</p>
+                    <p>2</p>
                     <h3>Years of Experience</h3>
                 </div>
                 <div className='container'>

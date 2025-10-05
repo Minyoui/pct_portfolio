@@ -16,9 +16,45 @@ import GitHub from '../../assets/misc/GitHub.svg';
 import Figma from '../../assets/misc/Figma.svg';
 import CSS3 from '../../assets/misc/CSS3.svg';
 import Canva from '../../assets/misc/Canva.svg';
+import Firebase from '../../assets/misc/Firebase.svg';
+
+function BranchLine({ height = "50px" }) {
+    return (
+        <div 
+            style={{
+                width:"1px",
+                height,
+                backgroundColor:"rgba(255,255,255,0.5)",
+                marginLeft:"4px"
+            }}
+        />
+    )
+}
 
 function Skills () {
     const [isHovered, setIsHovered] = useState(null);
+
+
+    const experiences = [
+        {
+            title: "Front-End Developer",
+            subtitle: "Freelance",
+            year: "2025",
+            branch: <BranchLine />
+        },
+        {
+            title:"Front-End Developer (Intern)",
+            subtitle:"Blissful Bali Spa",
+            year:"2025",
+            branch: <BranchLine />
+        },
+        {
+            title:"BS Computer Engineering",
+            subtitle:"De La Salle University Dasmariñas",
+            year:"2021-2025",
+            branch:"",
+        },
+    ];
 
     const skillsData = [
         'Communication',
@@ -36,8 +72,9 @@ function Skills () {
         { src: HTML5, label: 'HTML5'},
         { src: CSS3, label: 'CSS3'},
         { src: Figma, label: 'Figma'},
-        { src: VisualStudio, label: 'Visual Studio'},
+        { src: VisualStudio, label: 'Visual Studio Code'},
         { src: GitHub, label: 'Github'},
+        { src: Firebase, label: 'Firebase'},
         { src: Canva, label: 'Canva'},
     ];
 
@@ -45,11 +82,29 @@ function Skills () {
         <>
             <div className='skills-section-grid' id="skills">
                 <div className='experience'>
-                    <p><img src={Business}/>Experience</p>
-
+                    <h1><img src={Business}/>Experience</h1>
+                    
+                    <div className='timeline'>
+                        {experiences.map((exp, index) => (
+                            <>
+                                <div key={index} className='timeline-item'>
+                                    <div className='timeline-dot'/>
+                                    <div className='timeline-content'>
+                                        <div className='timeline-header'>
+                                            <h3 className='timeline-role'>{exp.title}</h3>
+                                            <span className='timeline-year'>{exp.year}</span>
+                                        </div>
+                                        <p className='timeline-subtitle'>{exp.subtitle}</p>
+                                    </div>
+                                </div>
+                                {exp.branch}
+                            </>
+                        ))}
+                    </div>
                 </div>
+                
                 <div className='tech-stack'>
-                    <p><img src={Stack}/>Tech Stack</p>
+                    <h1><img src={Stack}/>Tech Stack</h1>
                     <div className='tech-tools'>
                         {techTools.map((tool, index) => (
                             <motion.div 
@@ -95,7 +150,7 @@ function Skills () {
                     </div>
                 </div>
                 <div className='skills'>
-                    <p><img src={Bulb}/>Skills</p>
+                    <h1><img src={Bulb}/>Skills</h1>
                     <div className='skills-grid'>
                         {skillsData.map((skill, index) => (
                             <div className='skills-value'>

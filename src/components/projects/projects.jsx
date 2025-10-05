@@ -1,5 +1,6 @@
 import './projects.css';
 import { motion } from 'motion/react';
+import { useState } from 'react';
 
 //assets
 import React from '../../assets/misc/React.svg';
@@ -7,8 +8,54 @@ import HTML5 from '../../assets/misc/Html 5.svg';
 import CSS3 from '../../assets/misc/CSS3.svg';
 import JavaScript from '../../assets/misc/JavaScript.svg';
 import Figma from '../../assets/misc/Figma.svg';
+import Firebase from '../../assets/misc/Firebase.svg';
+import ExternalLink from '../../assets/External Link.png';
+
+function Deployed({
+
+    backgroundColor = "#4DB61C",
+    boxShadow = "0 1px 10px rgba(77, 219, 84, 0.8)"
+
+}) {
+    return (
+        <div 
+            style={{
+                backgroundColor,
+                height:"12px",
+                width:"12px",
+                borderRadius:"100px",
+                marginLeft:"8px",
+                boxShadow,
+            }}
+        />
+    )
+};
+
+function WIP({
+
+    backgroundColor = "#b61c1cff",
+    boxShadow = "0 1px 10px rgba(219, 77, 77, 0.8)"
+
+}) {
+    return (
+        <div 
+            style={{
+                backgroundColor,
+                height:"12px",
+                width:"12px",
+                borderRadius:"100px",
+                marginLeft:"8px",
+                boxShadow,
+            }}
+        />
+    )
+};
+
+
+
 
 function Projects () {
+
     const projectsData = [
         {
             id: 'project-one',
@@ -16,9 +63,10 @@ function Projects () {
             description: 'A modern website developed to provide an online booking system for a local spa business. ',
             role: 'Full Stack Developer',
             status: 'Deployed / Live',
-            indicator: <div style={{backgroundColor:"#4DB61C",height:"12px",width:"12px",borderRadius:"100px", marginLeft:"8px", boxShadow:"0 1px 10px rgba(77, 219, 84, 0.8)"}}/>,
+            indicator: <Deployed />,
             link: 'https://project-maison.vercel.app/',
-            tags: [React,HTML5,CSS3,JavaScript]
+            target: '_blank',
+            tags: [React, HTML5, CSS3, JavaScript, Firebase],
         },
 
         {
@@ -27,9 +75,10 @@ function Projects () {
             description: 'Work In Progress Project',
             role:'Front-End Developer',
             status:'Work In Progress',
-            indicator: <div style={{backgroundColor:"#b61c1cff",height:"12px",width:"12px",borderRadius:"100px", marginLeft:"8px", boxShadow:"0 1px 10px rgba(219, 77, 77, 0.8)"}}/>,
-            link: '',
-            tags: []
+            indicator: <WIP />,
+            link: '#project-two',
+            target:'',
+            tags: [],
         }
     ];
 
@@ -37,7 +86,8 @@ function Projects () {
         <>
             <div className='projects-section' id="projects">
                 {projectsData.map((project) => (
-                    <a href={project.link} target="_blank" className='project-box' id={project.id} key={project.id}>
+                    <a href={project.link} target={project.target} className='project-box' id={project.id} key={project.id}>
+                        <img src={ExternalLink} className='link' alt="external link"/>
                         <div className={project.id}
                             style={{
                                 height:"300px",
@@ -57,7 +107,7 @@ function Projects () {
                                 </div>
                                 <div className='project-tags'>
                                     {project.tags.map((index) => (
-                                        <img src={index} style={{width:"50px"}}/>
+                                        <img src={index} style={{width:"50px"}} alt="Tool Icon"/>
                                     ))}
                                 </div>
                             </div>
