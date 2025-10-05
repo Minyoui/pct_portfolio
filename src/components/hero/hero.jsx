@@ -2,14 +2,20 @@ import './hero.css';
 import { motion } from "motion/react";
 
 //assets
-import Logo from '../../assets/pacot-logo.svg';
+import Logo from '../../assets/pacot-logo-white.svg';
 import Model from '../../assets/pacot-model.png';
+
 
 
 function Hero () {
     return (
         <>
-            <div className='hero-section'>
+            <div className='hero-section' id="home">
+                <img src={Logo} alt="pacot logo"
+                    style={{
+                        width:"100px"
+                    }}
+                />
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}      // start state
                     animate={{ opacity: 1, y: 0 }}       // animate to this state

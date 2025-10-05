@@ -3,6 +3,8 @@ import { motion } from "motion/react";
 
 //assets
 import Profile from '../../assets/pacot-model.png';
+import LogoWhite from '../../assets/pacot-logo-white.svg';
+import LogoColor from '../../assets/pacot-logo-colored.svg';
 
 //logos
 import Facebook from '../../assets/Facebook.svg';
@@ -23,16 +25,9 @@ function Navbar () {
     return (
         <>
             <div className='navbar-container'>
-                <img src={Profile} alt="Profile Photo" className='profile-photo'
-                    style={{
-                       width:"100px",
-                       height:"100px",
-                       outline:"solid 5px #2B2B2B",
-                       borderRadius:"50%",
-                       position:"absolute",
-                       left:"30px",
-                       top:"10px"
-                    }}/>
+                <a href="#home">
+                    <img src={LogoColor} alt="Profile Photo" className='logo' style={{width:"30px"}}/>
+                </a>
 
                 <li className='navigation'>
                     <a href="#about"><div className="underline" style={{backgroundColor:"white",height:"1px"}}/>About</a>

@@ -9,6 +9,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
     z-index: 999;
 }
 
@@ -19,7 +20,6 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    right: 30px;
     padding-left: 30px;
 
     border-left: solid 1px white;
@@ -57,6 +57,11 @@
     width: 100%;
 }
 
-.profile-photo:hover {
-    transform: rotateZ(270deg);
+.logo {
+    filter: grayscale(1);
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    filter:grayscale(0);
 }
