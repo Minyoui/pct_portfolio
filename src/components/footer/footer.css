@@ -1,0 +1,33 @@
+.footer-section {
+    width: 100%;
+    height: fit-content;
+    background: linear-gradient(
+        to bottom,
+        #2B2B2B,
+        #191919
+    );
+
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: white;
+    gap: 20px;
+}
+
+.footer-ownership {
+    border-top: solid 1px white;
+    padding-top: 20px;
+    width: 100%;
+}
