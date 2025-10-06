@@ -54,7 +54,6 @@
 .navigation {
     display: flex;
     gap: 20px;
-    padding-left: 150px;
 }
 
 .navigation a {
@@ -110,10 +109,6 @@
     display: flex;
 }
 
-.navbar-container.scrolled:hover .navigation {
-    padding-left: 0px;
-}
-
 .navbar-container.scrolled .logo {
     width: 20px;
 }
@@ -122,4 +117,10 @@
     width: 400px;
 }
 
- 
+/* MOBILE */
+
+@media (max-width:720px) {
+    .social-media-icons {
+        display: none;
+    }
+}

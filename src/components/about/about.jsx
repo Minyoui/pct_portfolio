@@ -47,8 +47,7 @@ function About () {
                     style={{
                         outline:"solid 5px white",
                         borderRadius:"100%",
-                        width:"450px",
-                    }} /> 
+                    }} className='profile'/> 
             </div>
         </>
     )

@@ -16,6 +16,11 @@
     padding-right: 50px;
 }
 
+.profile {
+    width: clamp(250px, 30vw, 450px);
+    height: auto;
+}
+
 .profile-description p {
     color: white;
     font-weight: 300;
@@ -44,4 +49,10 @@
 
 .tab-value:hover {
     transform: translateY(-5px);
+}
+
+/* MOBILE */
+
+@media (max-width: 0px) {
+
 }
