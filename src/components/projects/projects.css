@@ -122,3 +122,21 @@
     gap: 50px;
     padding: 0 20px;
 }
+
+
+/* SCROLL ANIMATIONS */
+
+.projects-header.animate {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

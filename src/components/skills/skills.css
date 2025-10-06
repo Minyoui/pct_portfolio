@@ -29,9 +29,16 @@
 
 .skills-header,
 .skills-header button {
+    opacity: 0;
     font-family: inherit;
     color: white;
     font-size: 1rem;
+    
+    transition: all 1s ease;
+}
+
+.skills-header button {
+    opacity: 1;
 }
 
 .skills-header button {
@@ -52,9 +59,11 @@
 .experience,
 .tech-stack,
 .skills {
+    opacity: 0;
     padding: 25px;
     border-radius: 10px;
     background-color: #2b2b2b;
+    transition: all 1s ease;
 }
 
 .experience h1,
@@ -151,4 +160,60 @@
 
 .skills-value p {
     font-size: 1rem;
+}
+
+
+/* SCROLL ANIMATIONS */
+
+
+.skills-header.animate {
+    opacity: 1;
+    animation: fadeIn 0.5s ease;
+}
+
+.experience.animate {
+    opacity: 1;
+    animation: slideInLeft 1s ease;
+}
+
+.tech-stack.animate {
+    opacity: 1;
+    animation: slideInRight 1s ease;
+}
+
+.skills.animate {
+    opacity: 1;
+    animation: slideInRight 1.5s ease;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-50px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(50px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
 }

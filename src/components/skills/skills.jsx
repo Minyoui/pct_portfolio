@@ -1,5 +1,5 @@
 import './skills.css';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 //assets
@@ -34,7 +34,27 @@ function BranchLine({ height = "50px" }) {
 
 function Skills () {
     const [isHovered, setIsHovered] = useState(null);
+    const [isVisible, setIsVisible] = useState(false);
+    const ref = useRef(null);
 
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsVisible(entry.isIntersecting);
+            },
+            { threshold: 0.1 }
+        );
+
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => {
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
+        };
+    }, []);
 
     const experiences = [
         {
@@ -83,14 +103,13 @@ function Skills () {
         <>
             <div className='skills-section-grid' id="skills">
 
-                <div className='skills-header'> 
+                <div className={`skills-header ${isVisible? 'animate':''}`} ref={ref}> 
                     <p>Character Information</p>
                     <button><img src={More} alt='More'/></button>
                 </div>
 
-                <div className='experience'>
+                <div className={`experience ${isVisible? 'animate':''}`} ref={ref}>
                     <h1><img src={Business}/>Experience</h1>
-                    
                     <div className='timeline'>
                         {experiences.map((exp, index) => (
                             <>
@@ -110,7 +129,7 @@ function Skills () {
                     </div>
                 </div>
                 
-                <div className='tech-stack'>
+                <div className={`tech-stack ${isVisible? 'animate':''}`} ref={ref}>
                     <h1><img src={Stack}/>Tech Stack</h1>
                     <div className='tech-tools'>
                         {techTools.map((tool, index) => (
@@ -156,7 +175,7 @@ function Skills () {
                         ))}
                     </div>
                 </div>
-                <div className='skills'>
+                <div className={`skills ${isVisible? 'animate':''}`} ref={ref}>
                     <h1><img src={Bulb}/>Skills</h1>
                     <div className='skills-grid'>
                         {skillsData.map((skill, index) => (

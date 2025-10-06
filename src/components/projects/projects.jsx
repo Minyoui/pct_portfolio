@@ -1,5 +1,4 @@
 import './projects.css';
-import { motion } from 'motion/react';
 import { useState, useEffect, useRef } from 'react';
 
 //assets
@@ -61,15 +60,19 @@ function Projects () {
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting) setIsVisible(true);
+                setIsVisible(entry.isIntersecting);
             },
             { threshold: 0.3 } // 30% of the box must be visible
         );
 
-        if (ref.current) observer.observe(ref.current);
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
 
         return () => {
-            if (ref.current) observer.unobserve(ref.current);
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
         };
     }, []);
 
@@ -102,13 +105,7 @@ function Projects () {
     return (
         <>
             <div className='projects-section' id="projects">
-                <motion.p 
-                    className='projects-header'
-                    ref={ref}
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={ isVisible ? {opacity: 1, y:0} : {}}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                >Projects</motion.p>
+                <p className={`projects-header ${isVisible? 'animate' : ''}`} ref={ref} >Projects</p>
                 {projectsData.map((project) => (
                     <a 
                         href={project.link} 
