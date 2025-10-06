@@ -20,6 +20,7 @@
 }
 
 .contact-form {
+    opacity: 0;
     padding: 0 100px;
     gap: 25px;
 }
@@ -137,3 +138,19 @@
 }
 
 
+/* SCROLL ANIMATIONS */
+
+.contact-form.animate {
+    opacity: 1;
+    animation: slideInRight 1s ease;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}

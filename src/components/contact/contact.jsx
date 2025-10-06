@@ -1,4 +1,5 @@
 import './contact.css';
+import { useState, useEffect, useRef } from 'react';
 
 //assets
 import Send from '../../assets/Email Send.svg';
@@ -7,6 +8,29 @@ import Phone from '../../assets/Phone.svg';
 import Location from '../../assets/Address.svg';
 
 function Contact () {
+    const [isVisible, setIsVisible] = useState(false);
+    const ref = useRef(null);
+
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsVisible(entry.isIntersecting);
+            },
+            { threshold: 0.1 }
+        );
+    
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+    
+        return () => {
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
+        };
+    }, []);
+
     return (
         <div className='contact-section' id="contact">
             <div className='contact-information'>
@@ -20,7 +44,7 @@ function Contact () {
                     <p><img src={Location} alt='location'/>City of Imus, Cavite Philippines</p>
                 </div>
             </div>
-            <form className='contact-form'>
+            <form className={`contact-form ${isVisible? 'animate':''}`} ref={ref}>
                 <div className='form-name'>
                     <input type="text" placeholder=" " required/>
                     <label>Name</label>
