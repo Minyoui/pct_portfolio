@@ -1,6 +1,7 @@
 import './projects.css';
 import { useState, useEffect, useRef } from 'react';
 
+
 //assets
 import React from '../../assets/misc/React.svg';
 import HTML5 from '../../assets/misc/Html 5.svg';
@@ -62,7 +63,7 @@ function Projects () {
             ([entry]) => {
                 setIsVisible(entry.isIntersecting);
             },
-            { threshold: 0.3 } // 30% of the box must be visible
+            { threshold: 0.1 } // 10% of the box must be visible
         );
 
         if (ref.current) {
@@ -110,9 +111,10 @@ function Projects () {
                     <a 
                         href={project.link} 
                         target={project.target} 
-                        className='project-box' 
+                        className={`project-box ${isVisible? 'animate':''}`} 
                         id={project.id} 
                         key={project.id}
+                        ref={ref}
                     >
                         <img src={ExternalLink} className='link' alt="external link"/>
                         <div className={project.id}

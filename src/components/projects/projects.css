@@ -4,7 +4,7 @@
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     gap: 20px;
     padding: 100px 20px;
 
@@ -13,11 +13,14 @@
 .projects-header {
     text-align: left;
     color: white;
-    width: 100%;
+    width: 10%;
     background-color: #2B2B2B;
     padding: 10px 30px;
     border-radius: 15px;
     font-size: 1rem;
+    opacity: 0;
+
+    transition: all 1s ease;
 }
 
 .project-box {
@@ -29,7 +32,12 @@
     padding: 15px;
     border-radius: 15px;
     width: 100%;
-    transition: all 0.3s ease;
+    opacity: 0;
+    transition: transform 0.3s ease, 
+                box-shadow 0.3s ease,
+                opacity 0.5s ease;
+    
+
 }
 
 .link {
@@ -127,16 +135,41 @@
 /* SCROLL ANIMATIONS */
 
 .projects-header.animate {
-    animation: fadeIn 1s ease;
+    opacity: 1;
+    width: 100%;
+    animation: slideInLeft 1s ease;
+}
+
+.project-box.animate {
+    opacity: 1;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-50px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
 }
 
 @keyframes fadeIn {
     from {
-        transform: translateY(10px);
-        opacity: 0;
+        transform: translateY(50px);
     }
+
     to {
         transform: translateY(0px);
-        opacity: 1;
     }
 }
