@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Business from '../../assets/Business.png';
 import Stack from '../../assets/Layers.png';
 import Bulb from '../../assets/bulb.png';
+import More from '../../assets/More.svg';
 
 //misc
 import React from '../../assets/misc/React.svg';
@@ -81,7 +82,12 @@ function Skills () {
     return (
         <>
             <div className='skills-section-grid' id="skills">
-                <h3 className='skills-header'>Character Information</h3>
+
+                <div className='skills-header'> 
+                    <p>Character Information</p>
+                    <button><img src={More} alt='More'/></button>
+                </div>
+
                 <div className='experience'>
                     <h1><img src={Business}/>Experience</h1>
                     

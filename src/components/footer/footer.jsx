@@ -9,13 +9,13 @@ function Footer () {
             <div className='footer-section'>
                 <a href="#home" className='footer-logo'>
                     <img src={Logo} alt="Pacot Logo" />
-                    <span style={{fontSize:"2rem"}}>PACOT</span>
+                    <span>PACOT</span>
                 </a>
                 <p className="footer-ownership" style={{
                     textAlign:"center",
                     color:"white",
                     }}
-                >© Evane Pacot 2025, All rights reserved. Icons by <a href="" target="_blank" style={{textDecoration:"none", color:"white", fontWeight:"800"}}>Icons8</a></p>
+                >© Evane Pacot 2025, All rights reserved. Icons by <a href="https://icons8.com" target="_blank" style={{textDecoration:"none", color:"white", fontWeight:"800"}}>Icons8</a></p>
             </div>
         </>
     )

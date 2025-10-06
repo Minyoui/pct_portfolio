@@ -23,11 +23,18 @@
     flex-direction: column;
     text-decoration: none;
     color: white;
+    letter-spacing: 5px;
     gap: 20px;
+    padding: 50px;
+}
+
+.footer-logo span {
+    font-size: 2rem;
+    font-family:"Montserrat","sans-serif";
 }
 
 .footer-ownership {
-    border-top: solid 1px white;
+    border-top: solid 1px rgb(110, 110, 110);
     padding-top: 20px;
     width: 100%;
 }
