@@ -1,6 +1,6 @@
 import './projects.css';
 import { motion } from 'motion/react';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 //assets
 import React from '../../assets/misc/React.svg';
@@ -55,6 +55,23 @@ function WIP({
 
 
 function Projects () {
+    const [isVisible, setIsVisible] = useState(false);
+    const ref = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) setIsVisible(true);
+            },
+            { threshold: 0.3 } // 30% of the box must be visible
+        );
+
+        if (ref.current) observer.observe(ref.current);
+
+        return () => {
+            if (ref.current) observer.unobserve(ref.current);
+        };
+    }, []);
 
     const projectsData = [
         {
@@ -85,9 +102,21 @@ function Projects () {
     return (
         <>
             <div className='projects-section' id="projects">
-                <p className='projects-header'>Projects</p>
+                <motion.p 
+                    className='projects-header'
+                    ref={ref}
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={ isVisible ? {opacity: 1, y:0} : {}}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                >Projects</motion.p>
                 {projectsData.map((project) => (
-                    <a href={project.link} target={project.target} className='project-box' id={project.id} key={project.id}>
+                    <a 
+                        href={project.link} 
+                        target={project.target} 
+                        className='project-box' 
+                        id={project.id} 
+                        key={project.id}
+                    >
                         <img src={ExternalLink} className='link' alt="external link"/>
                         <div className={project.id}
                             style={{

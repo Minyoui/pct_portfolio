@@ -19,15 +19,19 @@
     gap: 15px;
 }
 
+.contact-form {
+    padding: 0 100px;
+    gap: 25px;
+}
+
 .contact-information {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 50px;
     width: 100%;
 }
-
-
 
 .contact-header p{
     color: #9E9E9E;
@@ -35,10 +39,19 @@
 }
 
 .contact-details {
-    text-align: left;
     font-weight: normal;
     color: white;
     font-size: 1rem;
+}
+
+.contact-details p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-details p img {
+    width: 30px;
 }
 
 .contact-header h1 {
@@ -47,4 +60,80 @@
     color: white;
     font-size: 4rem;
 }
+
+.form-message::placeholder,
+.form-name,
+.form-email {
+    font-family: 'Nunito','sans-serif';
+    color: white;
+    font-size: 14px;
+}
+
+.form-message,
+.contact-form input,
+.contact-form button {
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(
+        to right,
+        #2B2B2B,
+        #191919
+    );
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Nunito','sans-serif';
+    color: white;
+    font-size: 14px;
+    resize: none;
+}
+
+.contact-form button {
+    cursor: pointer;
+    text-align: left;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    transition: transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    transform: translateX(-10px);
+}
+
+.contact-form button img {
+    width: 20px;
+}
+
+.form-message {
+    height: 200px;
+}
+
+.form-name,
+.form-email {
+    position: relative;
+    width: 100%;
+}
+
+.form-name label,
+.form-email label {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+
+    transition: all 0.3s ease;
+}
+
+.form-name input:focus + label,
+.form-email input:focus + label,
+.form-name input:not(:placeholder-shown) + label, 
+.form-email input:not(:placeholder-shown) + label {
+    top: -21px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
 
