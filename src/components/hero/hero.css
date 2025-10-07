@@ -6,7 +6,7 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    animation: fadeIn 1s ease-in forwards;
+    animation: fadeInBg 1.5s ease-in forwards;
 
     display: flex;
     flex-direction: column;
@@ -71,7 +71,7 @@
     font-weight: bold;
 }
 
-@keyframes fadeIn {
+@keyframes fadeInBg {
     from {
         opacity: 0;
     }

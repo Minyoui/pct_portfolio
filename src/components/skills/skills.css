@@ -3,8 +3,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 15px;
-    padding: 0 15px;
-    padding-top: 100px;
+    padding: 10px 20px;
     color: white;
 
     width: 100%;

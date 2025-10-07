@@ -100,7 +100,6 @@ function Skills () {
     ];
 
     return (
-        <>
             <div className='skills-section-grid' id="skills">
 
                 <div className={`skills-header ${isVisible? 'animate':''}`} ref={ref}> 
@@ -186,7 +185,6 @@ function Skills () {
                     </div>
                 </div>
             </div>
-        </>
     )
 }
 
