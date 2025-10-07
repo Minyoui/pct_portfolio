@@ -100,9 +100,9 @@ function Skills () {
     ];
 
     return (
-            <div className='skills-section-grid' id="skills">
+            <div className='skills-section-grid' id="skills" ref={ref}>
 
-                <div className={`skills-header ${isVisible? 'animate':''}`} ref={ref}> 
+                <div className={`skills-header ${isVisible? 'animate':''}`}> 
                     <p>Character Information</p>
                     <button><img src={More} alt='More'/></button>
                 </div>

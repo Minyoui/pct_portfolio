@@ -7,6 +7,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 100px 50px;
+
+    transition: all 0.3s ease;
 }
 
 .profile-description {
@@ -53,6 +55,19 @@
 
 /* MOBILE */
 
-@media (max-width: 0px) {
+@media (max-width: 720px) {
+    .profile {
+        display: none;
+    }
+    .profile-description {
+        padding: 0px;
+    }
 
+    .key-expertise {
+        width: 100%;
+    }
+    
+    .about-section {
+        padding: 20px;
+    }
 }

@@ -215,3 +215,20 @@
         transform: translateY(0px);
     }
 }
+
+/* MOBILE */
+
+@media(max-width: 560px) {
+    .experience {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+    }
+    .tech-stack {
+        grid-column: 1 / 3;
+        grid-row: 3 / 3;
+    }
+    .skills {
+        grid-column: 1 / 4;
+        grid-row: 4 / 4;
+    }
+}

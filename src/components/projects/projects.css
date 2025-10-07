@@ -173,3 +173,20 @@
         transform: translateY(0px);
     }
 }
+
+/* MOBILE */
+
+@media (max-width: 720px) {
+    .project-box {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .link {
+        bottom: 225px;
+    }
+
+    .project-tags {
+        padding: 20px;
+    }
+}

@@ -105,8 +105,8 @@ function Projects () {
 
     return (
         <>
-            <div className='projects-section' id="projects">
-                <p className={`projects-header ${isVisible? 'animate' : ''}`} ref={ref} >Projects</p>
+            <div className='projects-section' id="projects" ref={ref} >
+                <p className={`projects-header ${isVisible? 'animate' : ''}`} >Projects</p>
                 {projectsData.map((project) => (
                     <a 
                         href={project.link} 
