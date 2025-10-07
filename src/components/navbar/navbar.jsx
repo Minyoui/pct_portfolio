@@ -10,7 +10,7 @@ import Menu from '../../assets/Menu.svg';
 
 //logos
 import Facebook from '../../assets/Facebook.svg';
-import Github from '../../assets/Github.svg';
+import Github from '../../assets/GitHub.svg';
 import Instagram from '../../assets/Instagram.svg';
 import Jobstreet from '../../assets/Jobstreet.svg';
 import LinkedIn from '../../assets/LinkedIn.svg';
