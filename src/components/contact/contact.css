@@ -6,7 +6,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 100px 0px;
+    padding: 100px 20px;
 }
 
 .contact-details,
@@ -22,7 +22,7 @@
 
 .contact-form {
     opacity: 0;
-    padding: 0 100px;
+    padding-left: 100px;
     gap: 25px;
 }
 
@@ -37,10 +37,13 @@
 
 .contact-header p{
     color: #9E9E9E;
+    text-align: left;
     letter-spacing: 1px;
 }
 
 .contact-details {
+    width: 100%;
+    align-items: start;
     font-weight: normal;
     color: white;
     font-size: 1rem;
