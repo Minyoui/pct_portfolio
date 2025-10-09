@@ -1,0 +1,42 @@
+
+
+.insight-section {
+    width: 100%;
+    height: 100dvh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+}
+
+.insight-details p{
+    color: white;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.insight-details span {
+    color: #8BC34A;
+    font-weight: bold;
+}
+
+.insight-image {
+    padding: 20px;
+    background-color: #2B2B2B;
+    border-radius: 20px;
+    border: solid 2px #8BC34A;
+    box-shadow: 0 1px 10px #8BC34A;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+}
+
+.insight-image img {
+    width: 500px;
+    border-radius: 10px;
+}
