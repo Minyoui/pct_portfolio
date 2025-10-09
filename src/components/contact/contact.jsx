@@ -39,9 +39,9 @@ function Contact () {
                     <p>Want me to be part of your next project?</p>
                 </div>
                 <div className='contact-details'>
-                    <p><img src={Email} alt='email'/>evanepacot2002@gmail.com</p>
-                    <p><img src={Phone} alt='phone'/>(+63)947-631-8165</p>
-                    <p><img src={Location} alt='location'/>City of Imus, Cavite Philippines</p>
+                    <p><img src={Email} alt='email' loading="lazy"/>evanepacot2002@gmail.com</p>
+                    <p><img src={Phone} alt='phone' loading="lazy"/>(+63)947-631-8165</p>
+                    <p><img src={Location} alt='location' loading="lazy"/>City of Imus, Cavite Philippines</p>
                 </div>
             </div>
             <form className={`contact-form ${isVisible? 'animate':''}`} ref={ref}>

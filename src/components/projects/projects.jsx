@@ -116,7 +116,7 @@ function Projects () {
                         key={project.id}
                         ref={ref}
                     >
-                        <img src={ExternalLink} className='link' alt="external link"/>
+                        <img src={ExternalLink} className='link' alt="external link" loading="lazy"/>
                         <div className={project.id}
                             style={{
                                 height:"300px",
@@ -136,7 +136,7 @@ function Projects () {
                                 </div>
                                 <div className='project-tags'>
                                     {project.tags.map((index) => (
-                                        <img src={index} style={{width:"50px"}} alt="Tool Icon"/>
+                                        <img src={index} style={{width:"50px"}} alt="Tool Icon" loading="lazy"/>
                                     ))}
                                 </div>
                             </div>

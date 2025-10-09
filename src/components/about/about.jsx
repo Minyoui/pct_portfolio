@@ -43,7 +43,7 @@ function About () {
                     </div>
 
                 </div>
-                <img src={Model} alt="Profile Photo"
+                <img src={Model} alt="Profile Photo" loading='lazy'
                     style={{
                         outline:"solid 5px white",
                         borderRadius:"100%",

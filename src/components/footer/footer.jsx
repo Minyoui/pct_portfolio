@@ -24,7 +24,7 @@ function Footer () {
         <>
             <div className='footer-section'>
                 <a href="#home" className='footer-logo'>
-                    <img src={Logo} alt="Pacot Logo" />
+                    <img src={Logo} alt="Pacot Logo" loading="lazy"/>
                     <span>PACOT</span>
                 </a>
                 <div className='social-links'>
@@ -35,7 +35,7 @@ function Footer () {
                             whileTap={{ scale: 0.95 }}
                             href={links.link}
                             target="_blank">
-                            <img src={links.src} alt={links.label}/>
+                            <img src={links.src} alt={links.label} loading="lazy"/>
                         </motion.a>
                     ))}
                 </div>

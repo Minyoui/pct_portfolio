@@ -104,11 +104,11 @@ function Skills () {
 
                 <div className={`skills-header ${isVisible? 'animate':''}`}> 
                     <p>Character Information</p>
-                    <button><img src={More} alt='More'/></button>
+                    <button><img src={More} alt='More' loading="lazy"/></button>
                 </div>
 
                 <div className={`experience ${isVisible? 'animate':''}`} ref={ref}>
-                    <h1><img src={Business} alt="business-icon"/>Experience</h1>
+                    <h1><img src={Business} alt="business-icon" loading="lazy"/>Experience</h1>
                     <div className='timeline'>
                         {experiences.map((exp, index) => (
                             <>
@@ -129,7 +129,7 @@ function Skills () {
                 </div>
                 
                 <div className={`tech-stack ${isVisible? 'animate':''}`} ref={ref}>
-                    <h1><img src={Stack} alt="stack-icon"/>Tech Stack</h1>
+                    <h1><img src={Stack} alt="stack-icon" loading="lazy"/>Tech Stack</h1>
                     <div className='tech-tools'>
                         {techTools.map((tool, index) => (
                             <motion.div 
@@ -142,6 +142,7 @@ function Skills () {
                                     src={tool.src}
                                     alt={tool.label}
                                     whileHover={{ scale: 1.1 }}
+                                    loading="lazy"
                                 />
                                 <AnimatePresence>
                                     {isHovered === index && (
@@ -175,7 +176,7 @@ function Skills () {
                     </div>
                 </div>
                 <div className={`skills ${isVisible? 'animate':''}`} ref={ref}>
-                    <h1><img src={Bulb} alt="bulb-icon"/>Skills</h1>
+                    <h1><img src={Bulb} alt="bulb-icon" loading="lazy"/>Skills</h1>
                     <div className='skills-grid'>
                         {skillsData.map((skill, index) => (
                             <div className='skills-value'>
