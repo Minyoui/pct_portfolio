@@ -1,6 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Syncopate:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* NUNITO FONT */
+@font-face {
+  font-family: 'Nunito';
+  src: url('./assets/fonts/Nunito-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('./assets/fonts/Nunito-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* OOOH BABY FONT */
+@font-face {
+  font-family: 'Oooh Baby';
+  src: url('./assets/fonts/OoohBaby-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* MONTSERRAT FONT */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 * {
   box-sizing: border-box;
@@ -13,8 +44,12 @@ html {
 }
 
 body {
-  font-family: 'Nunito','sans-serif';
+  font-family: 'Nunito', sans-serif;
   background-color: #191919;
+}
+
+strong {
+  font-weight: 800;
 }
 
 img {
