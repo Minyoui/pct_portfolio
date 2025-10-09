@@ -43,7 +43,7 @@
 
 .contact-details {
     width: 100%;
-    align-items: start;
+    align-items: center;
     font-weight: normal;
     color: white;
     font-size: 1rem;
@@ -62,6 +62,7 @@
 .contact-header h1 {
     font-family: 'Oooh baby','sans-serif';
     font-weight: normal;
+    text-align: center;
     color: white;
     font-size: 4rem;
 }

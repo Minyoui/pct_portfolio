@@ -2,6 +2,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: 0 20px;
 }
 .navbar-container {
     background: #2B2B2B;
@@ -87,12 +88,15 @@
     box-shadow: 0 10px 10px rgba(0,0,0,0.5);
     top: 15px;
     height: 50px;
-    width: 150px;
+    width: 60%;
+    max-width: 150px;
     border-radius: 1000px;
     align-items: center;
     justify-content: space-around;
     border: none;
     overflow: hidden;
+
+    transition: all 0.3s ease;
 }
 
 .menu-icon,
@@ -114,7 +118,8 @@
 }
 
 .navbar-container.scrolled:hover {
-    width: 400px;
+    width: 90%;
+    max-width: 400px;
 }
 
 /* MOBILE */
