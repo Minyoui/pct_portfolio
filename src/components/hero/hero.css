@@ -1,6 +1,8 @@
 .hero-section {
     width: 100%;
-    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 100px 0px;
     background-image: url("../../assets/DJI_0217.JPG");
     background-size: cover;
     background-position: center;
@@ -89,5 +91,13 @@
     to {
         opacity: 1;
         tranform: translateY(0px);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:720px) {
+    .hero-section {
+        
     }
 }
