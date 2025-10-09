@@ -3,8 +3,6 @@ import { motion } from "motion/react";
 import { useState, useEffect, useRef } from 'react';
 
 //assets
-import Profile from '../../assets/pacot-model.png';
-import LogoWhite from '../../assets/pacot-logo-white.svg';
 import LogoColor from '../../assets/pacot-logo-colored.svg';
 import Menu from '../../assets/Menu.svg';
 
@@ -57,12 +55,14 @@ function Navbar () {
                 </a>
                 <div className='menu-divider'/>
                 <img src={Menu} style={{width:"30px"}} className='menu-icon'/>
-                <li className='navigation'>
-                    <a href="#about"><div className="underline" style={{backgroundColor:"white",height:"1px"}}/>About</a>
-                    <a href="#skills"><div className="underline" style={{backgroundColor:"white",height:"1px"}}/>Skills</a>
-                    <a href="#projects"><div className="underline" style={{backgroundColor:"white",height:"1px"}}/>Projects</a>
-                    <a href="#contact"><div className="underline" style={{backgroundColor:"white",height:"1px"}}/>Contact</a>
-                </li>
+                <ul>
+                    <li className='navigation'>
+                        <a href="#about"><div className="underline" style={{backgroundColor:"white",height:"1px"}}/>About</a>
+                        <a href="#skills"><div className="underline" style={{backgroundColor:"white",height:"1px"}}/>Skills</a>
+                        <a href="#projects"><div className="underline" style={{backgroundColor:"white",height:"1px"}}/>Projects</a>
+                        <a href="#contact"><div className="underline" style={{backgroundColor:"white",height:"1px"}}/>Contact</a>
+                    </li>
+                </ul>
 
                 <div className='social-media-icons'>
                     {links.map((link, index) => (

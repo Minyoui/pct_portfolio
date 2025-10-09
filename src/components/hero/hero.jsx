@@ -3,9 +3,6 @@ import { motion } from "motion/react";
 
 //assets
 import Logo from '../../assets/pacot-logo-white.svg';
-import Model from '../../assets/pacot-model.png';
-
-
 
 function Hero () {
     return (

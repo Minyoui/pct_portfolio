@@ -108,7 +108,7 @@ function Skills () {
                 </div>
 
                 <div className={`experience ${isVisible? 'animate':''}`} ref={ref}>
-                    <h1><img src={Business}/>Experience</h1>
+                    <h1><img src={Business} alt="business-icon"/>Experience</h1>
                     <div className='timeline'>
                         {experiences.map((exp, index) => (
                             <>
@@ -129,7 +129,7 @@ function Skills () {
                 </div>
                 
                 <div className={`tech-stack ${isVisible? 'animate':''}`} ref={ref}>
-                    <h1><img src={Stack}/>Tech Stack</h1>
+                    <h1><img src={Stack} alt="stack-icon"/>Tech Stack</h1>
                     <div className='tech-tools'>
                         {techTools.map((tool, index) => (
                             <motion.div 
@@ -175,7 +175,7 @@ function Skills () {
                     </div>
                 </div>
                 <div className={`skills ${isVisible? 'animate':''}`} ref={ref}>
-                    <h1><img src={Bulb}/>Skills</h1>
+                    <h1><img src={Bulb} alt="bulb-icon"/>Skills</h1>
                     <div className='skills-grid'>
                         {skillsData.map((skill, index) => (
                             <div className='skills-value'>

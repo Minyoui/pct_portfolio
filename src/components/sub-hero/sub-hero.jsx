@@ -9,18 +9,18 @@ function SubHero () {
                     borderBottomLeftRadius:"0px",
                 }}>
                     <p>2</p>
-                    <h3>Years of Experience</h3>
+                    <span>Years of Experience</span>
                 </div>
                 <div className='container'>
                     <p>2</p>
-                    <h3>Projects Completed</h3>
+                    <span>Projects Completed</span>
                 </div>
                 <div className='container' style={{
                     borderTopRightRadius:"0px",
                     borderBottomRightRadius:"0px",
                 }}>
                     <p>8</p>
-                    <h3>Technology Stack</h3>
+                    <span>Technology Stack</span>
                 </div>
             </div>
         </>
