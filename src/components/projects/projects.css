@@ -183,10 +183,27 @@
     }
 
     .link {
+        display: inline;
+    }
+
+    .project-one {
+        filter: grayscale(0);
+    }
+
+    .link {
         bottom: 225px;
     }
 
     .project-tags {
         padding: 20px;
+        overflow:scroll;
+    }
+
+    .role-status {
+        justify-content: center;
+    }
+
+    .role-status p {
+        font-size: 0.8rem;
     }
 }

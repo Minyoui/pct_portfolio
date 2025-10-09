@@ -6,7 +6,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 100px 50px;
+    padding: 100px 20px;
 
     transition: all 0.3s ease;
 }
@@ -68,6 +68,6 @@
     }
     
     .about-section {
-        padding: 20px;
+        padding: 100px 20px;
     }
 }
