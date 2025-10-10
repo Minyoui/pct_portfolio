@@ -35,6 +35,7 @@ function BranchLine({ height = "50px" }) {
 function Skills () {
     const [isHovered, setIsHovered] = useState(null);
     const [isVisible, setIsVisible] = useState(false);
+    const [isModalOpen, setModalOpen] = useState(false);
     const ref = useRef(null);
 
     useEffect(() => {
@@ -104,7 +105,7 @@ function Skills () {
 
                 <div className={`skills-header ${isVisible? 'animate':''}`}> 
                     <p>Character Information</p>
-                    <button><img src={More} alt='More' loading="lazy"/></button>
+                    <button onClick={() => setModalOpen(true)}><img src={More} alt='More' loading="lazy"/></button>
                 </div>
 
                 <div className={`experience ${isVisible? 'animate':''}`} ref={ref}>
@@ -185,6 +186,14 @@ function Skills () {
                         ))}
                     </div>
                 </div>
+                {/* MODALS */}
+                {isModalOpen && (
+                    <div className='character-info-modal-overlay'>
+                        <div className='modal-container'> 
+                        </div>
+                        <button onClick={() => setModalOpen(false)}>Close Modal</button>
+                    </div>
+                )}
             </div>
     )
 }

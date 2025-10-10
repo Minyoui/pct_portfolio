@@ -161,6 +161,40 @@
     font-size: 1rem;
 }
 
+/* MODAL */
+
+.character-info-modal-overlay {
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    animation: Modal 0.5s ease;
+}
+
+.modal-container {
+    background: #191919;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes Modal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 
 /* SCROLL ANIMATIONS */
 
