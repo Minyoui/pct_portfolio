@@ -1,3 +1,23 @@
+$darkModeBackground: #2B2B2B;
+$darkModeCaptionColor: #9E9E9E;
+$darkDefaultColor: white;
+
+
+$lightModeBackground: #F4F5F9;
+$lightModeHeaderColor: #34363F;
+$lightDefaultColor: #565863;
+
+%darkMode {
+    background: $darkModeBackground;
+    color: $darkDefaultColor;
+    transition: all 0.3s ease;
+}
+
+%lightMode {
+    background: $lightModeBackground;
+    color: $lightDefaultColor;
+}
+
 .sub-hero-section {
     width: 100%;
     height: fit-content;
@@ -9,7 +29,7 @@
 }
 
 .container {
-    background-color: #2B2B2B;
+    @extend %darkMode;
     border-radius: 20px;
     flex: 1;
     transition: all 0.3s ease;
@@ -21,23 +41,35 @@
     justify-content: center;
 }
 
+.sub-hero-section.light .container {
+    @extend %lightMode;
+}
+
 .container:hover{
     flex: 2;
 }
 
 .container p {
-    color: white;
+    color: $darkDefaultColor;
     font-size: 2rem;
     font-weight: bold;
     transition: all 0.3s ease;
 }
 
+.sub-hero-section.light .container p {
+    color: $lightModeHeaderColor;
+}
+
 .container span {
-    color: rgba(255,255,255,0.5);
+    color: $darkModeCaptionColor;
     font-weight: 400;
     font-size: 1rem;
     font-style: normal;
     text-align: center;
+}
+
+.sub-hero-section.light .container span {
+    color: $lightDefaultColor;
 }
 
 .container:hover p {

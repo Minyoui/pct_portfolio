@@ -1,0 +1,8 @@
+body {
+    background: #191919;
+    transition: background 0.3s ease;
+}
+
+body.light {
+    background: #FEFEFF;
+}

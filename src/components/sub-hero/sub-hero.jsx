@@ -1,9 +1,13 @@
-import './sub-hero.css';
+import './sub-hero.scss';
+
+//DarkMode
+import { useDarkMode } from '../../context/DarkModeContext';
 
 function SubHero () {
+    const { darkMode } = useDarkMode();
+
     return (
-        <>
-            <div className='sub-hero-section'>
+            <div className={`sub-hero-section ${darkMode? 'light' : 'dark'}`}>
                 <div className='container' style={{
                     borderTopLeftRadius:"0px",
                     borderBottomLeftRadius:"0px",
@@ -23,7 +27,6 @@ function SubHero () {
                     <span>Technology Stack</span>
                 </div>
             </div>
-        </>
     )
 }
 
