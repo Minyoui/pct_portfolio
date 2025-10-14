@@ -1,6 +1,7 @@
 import Navbar from './components/navbar/navbar';
 import Hero from './components/hero/hero'
 import SubHero from './components/sub-hero/sub-hero';
+import DarkModeToggle from './components/DarkModeToggle/DarkModeToggle';
 import React, { Suspense } from 'react';
 
 const About = React.lazy(() => import ('./components/about/about'))
@@ -24,6 +25,7 @@ function App() {
       <Insight />
       <Contact />
       <Footer />
+      <DarkModeToggle />
     </>
   )
 }

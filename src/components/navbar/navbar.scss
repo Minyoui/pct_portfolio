@@ -1,12 +1,30 @@
+$darkModeBackground: #2B2B2B;
+$darkDefaultColor: white;
+
+
+$lightModeBackground: #F4F5F9;
+$lightDefaultColor: #565863;
+
+%darkMode {
+    background: $darkModeBackground;
+    color: $darkDefaultColor;
+    transition: all 0.3s ease;
+}
+
+%lightMode {
+    background: $lightModeBackground;
+    color: $lightDefaultColor;
+}
+
 .nav-wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 0 20px;
 }
+
 .navbar-container {
-    background: #2B2B2B;
-    border-bottom: solid 1px rgb(85, 85, 85);
+    @extend %darkMode;
     width: 100%;
     height: 70px;
 
@@ -20,10 +38,9 @@
     z-index: 999;
 }
 
-.menu-divider {
-    width: 1px;
-    background-color: white;
-    height: 30px;
+.nav-wrapper.light .navigation a,
+.nav-wrapper.light .navbar-container {
+    @extend %lightMode;
 }
 
 .logo {
@@ -39,14 +56,22 @@
     gap: 20px;
     padding-left: 30px;
 
-    border-left: solid 1px white;
+    border-left: solid 1px $darkDefaultColor;
+}
+
+.nav-wrapper.light .social-media-icons {
+    border-left: solid 1px $lightDefaultColor;
 }
 
 .social-media-icons img {
     opacity: 30%;
     width: 30px;
-
     transition: all 0.3s ease;
+}
+
+.nav-wrapper.light .menu-icon,
+.nav-wrapper.light .social-media-icons img {
+    filter: invert(1);
 }
 
 .social-media-icons img:hover {
@@ -61,14 +86,20 @@
 }
 
 .navigation a {
-    color: white;
+    @extend %darkMode;
     display: flex;
     flex-direction: column-reverse;
 }
 
 .underline {
+    background: $darkDefaultColor;
+    height: 1px;
     width: 0%;
     transition: all 0.5s ease;
+}
+
+.nav-wrapper.light .underline {
+    background: $lightDefaultColor;
 }
 
 .navigation a:hover .underline{
@@ -87,7 +118,7 @@
 /* SCROLLED NAVBAR */
 
 .navbar-container.scrolled {
-    background: #2B2B2B;
+    @extend %darkMode;
     box-shadow: 0 10px 10px rgba(0,0,0,0.5);
     top: 15px;
     height: 50px;

@@ -1,0 +1,78 @@
+$darkColor: #111;
+$lightColor: #fff;
+
+.dark-toggle-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  padding: 5px 25px;
+  font-size: 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: $darkColor;
+  color: $lightColor;
+  transition: 0.3s ease;
+
+  box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+}
+
+.dark-toggle-button:hover {
+  transform: scale(1.1);
+}
+
+.dark-toggle-button.light {
+  color: $darkColor;
+  background-color: $lightColor;
+}
+
+
+.sun {
+  background-color: $darkColor;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  transform: translateX(20px);
+  transition: all 0.3s ease;
+}
+
+.moon {
+  background-color: $lightColor;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  transform: translateX(-15px);
+  position: absolute;
+  bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.moon::after {
+  content: "";
+  left: 25px;
+  background-color: $darkColor;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: absolute;
+  overflow: hidden;
+  bottom: 0px;
+  left: 10px;
+}
+
+.dark-toggle-button.light .moon {
+  transition: all 0.3s ease;
+  opacity: 0%;
+  transform: translateX(10px);
+}
+
+.dark-toggle-button.light .moon::after {
+  transition: 0.3s ease;
+  left: 0px;
+}
+
+.dark-toggle-button.dark .sun {
+  transition: all 0.3s ease;
+  transform: translateX(-20px);
+}

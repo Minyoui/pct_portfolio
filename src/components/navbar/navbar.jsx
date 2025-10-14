@@ -1,6 +1,9 @@
-import './navbar.css';
+import './navbar.scss';
 import { motion } from "motion/react";
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
+
+//DarkMode
+import { useDarkMode } from '../../context/DarkModeContext';
 
 //assets
 import LogoColor from '../../assets/pacot-logo-colored.svg';
@@ -15,8 +18,7 @@ import LinkedIn from '../../assets/LinkedIn.svg';
 
 function Navbar () {
     const [scrolled, isScrolled] = useState(false);
-    const [menuOpen, setMenuOpen] = useState(false);
-    const ref = useRef(null);
+    const { darkMode } = useDarkMode();
     
     // Navbar scroll identifier
     useEffect(() => {
@@ -27,17 +29,7 @@ function Navbar () {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-    
-    // Mobile Nav screen automatically closes when resized to desktop
-    useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth > 720) {
-                setMenuOpen(false);
-            }
-        };
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+
 
     const links = [
         {src: Facebook, link:"https://www.facebook.com/evane.pacot/", label:"Facebook"},
@@ -48,7 +40,7 @@ function Navbar () {
     ]
 
     return (
-        <div className='nav-wrapper'>
+        <div className={`nav-wrapper ${darkMode? 'light' : 'dark'}`}>
             <div className={`navbar-container ${scrolled? 'scrolled':''}`}>
                 <img src={Menu} style={{width:"30px"}} className='menu-icon'/>
                 <ul  className='navigation'>
@@ -58,10 +50,10 @@ function Navbar () {
                         </a>
                     </li>
                     <li className='nav-tabs'>
-                        <a href="#about"><div className="underline" style={{backgroundColor:"white",height:"1px"}}/>About</a>
-                        <a href="#skills"><div className="underline" style={{backgroundColor:"white",height:"1px"}}/>Skills</a>
-                        <a href="#projects"><div className="underline" style={{backgroundColor:"white",height:"1px"}}/>Projects</a>
-                        <a href="#contact"><div className="underline" style={{backgroundColor:"white",height:"1px"}}/>Contact</a>
+                        <a href="#about"><div className="underline"/>About</a>
+                        <a href="#skills"><div className="underline"/>Skills</a>
+                        <a href="#projects"><div className="underline"/>Projects</a>
+                        <a href="#contact"><div className="underline"/>Contact</a>
                     </li>
                 </ul>
 
