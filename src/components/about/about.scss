@@ -1,3 +1,23 @@
+$darkModeBackground: #2B2B2B;
+$darkModeCaptionColor: #9E9E9E;
+$darkDefaultColor: white;
+
+
+$lightModeBackground: #F4F5F9;
+$lightModeHeaderColor: #34363F;
+$lightDefaultColor: #565863;
+
+%darkMode {
+    background: $darkModeBackground;
+    color: $darkDefaultColor;
+    transition: all 0.3s ease;
+}
+
+%lightMode {
+    background: $lightModeBackground;
+    color: $lightDefaultColor;
+}
+
 .about-section {
     width: 100%;
     height: fit-content;
@@ -20,8 +40,16 @@
 }
 
 .profile-description p {
-    color: white;
+    color: $darkDefaultColor;
     font-weight: 300;
+}
+
+.about-section.light .profile-description p {
+    color: $lightDefaultColor;
+}
+
+.about-section.light .profile-description img {
+    filter: invert(1);
 }
 
 .key-expertise {
@@ -34,7 +62,7 @@
 .tab-value {
     border-radius: 1000px;
     padding: 10px 20px;
-    color: white;
+    @extend %darkMode;
     width: fit-content;
     max-height: 60px;
 
@@ -43,6 +71,19 @@
     gap: 15px;
 
     transition: all 0.3s ease;
+}
+
+.tab-value div {
+    background: rgba(25,25,25);
+    transition: background 0.3s ease;
+}
+
+.about-section.light .tab-value div {
+    background: #E7E8EF;
+}
+
+.about-section.light .tab-value {
+    @extend %lightMode;
 }
 
 .tab-value:hover {

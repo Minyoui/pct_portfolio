@@ -1,14 +1,18 @@
-import './about.css';
+import './about.scss';
 import { motion } from 'motion/react';
 
+//DarkMode
+import { useDarkMode } from '../../context/DarkModeContext';
+
 //assets
-import Model from '../../assets/pacot-model-two.png';
 import ModelOne from '../../assets/pacot-model-three.avif';
 import ModelTwo from '../../assets/pacot-model-four.avif';
 
 import Info from '../../assets/Info.png';
 
 function About () {
+    const { darkMode } = useDarkMode();
+
     const expertise = [
         'HTML5 & CSS3 Expertise',
         "Performance Optimization",
@@ -17,7 +21,7 @@ function About () {
     ];
 
     return (
-            <div className='about-section' id="about">
+            <div className={`about-section ${darkMode? 'light':'dark'}`} id="about">
                 <div className='profile-description'>
                     <p style={{
                         display:"flex",
@@ -37,10 +41,8 @@ function About () {
 
                     <div className='key-expertise'>
                         {expertise.map((index) => (
-                            <div className='tab-value' key={index} style={{
-                                backgroundColor:"#2B2B2B",
-                            }}>
-                                <div style={{height:"10px",width:"10px", backgroundColor:"rgba(25,25,25)",borderRadius:"100%"}}/>
+                            <div className='tab-value' key={index}>
+                                <div style={{height:"10px",width:"10px",borderRadius:"100%"}}/>
                                 {index}
                             </div>
                         ))}
