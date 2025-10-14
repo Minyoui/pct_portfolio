@@ -1,3 +1,10 @@
+$darkModeBackground: #2B2B2B;
+$darkDefaultColor: white;
+
+
+$lightModeBackground: #F4F5F9;
+$lightDefaultColor: #565863;
+$lightContainerColor: #E7E8EF;
 
 
 .insight-section {
@@ -20,9 +27,14 @@
 }
 
 .insight-details p{
-    color: white;
+    color: $darkDefaultColor;
     text-align: left;
     font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.insight-section.light .insight-details p {
+    color: $lightDefaultColor;
 }
 
 .insight-details span {
@@ -32,7 +44,7 @@
 
 .insight-image {
     padding: 10px;
-    background-color: #2B2B2B;
+    background-color: $darkModeBackground;
     border-radius: 20px;
     border: solid 2px #8BC34A;
     box-shadow: 0 1px 10px #8BC34A;
@@ -42,6 +54,12 @@
     align-items: center;
     justify-items: center;
     gap: 10px;
+
+    transition: background-color 0.3s ease;
+}
+
+.insight-section.light .insight-image {
+    background-color: $lightContainerColor;
 }
 
 .insight-image img {
@@ -65,9 +83,14 @@
     gap: 10px;
 }
 
+.insight-section.light .multiple-devices img {
+    filter: invert(1);
+}
+
 .multiple-devices img,
 .approval img {
     width: clamp(50px, 15vw, 80px);
+    transition: filter 0.3s ease;
 }
 
 /* SCROLL ANIMATION */

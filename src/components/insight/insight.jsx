@@ -1,6 +1,8 @@
-import './insight.css';
+import './insight.scss';
 import { useState, useEffect, useRef } from 'react';
-import { motion } from 'motion/react';
+
+//DarkMode
+import { useDarkMode } from '../../context/DarkModeContext';
 
 //assets
 import desktopInsight from '../../assets/desktop-insight.jpg';
@@ -25,6 +27,7 @@ function Google () {
 
 function Insight () {
     const [isVisible, setIsVisible] = useState(false);
+    const { darkMode } = useDarkMode();
     const ref = useRef(null);
 
     useEffect(() => {
@@ -47,7 +50,7 @@ function Insight () {
         }, []);
 
     return (
-        <div className='insight-section' ref={ref}>
+        <div className={`insight-section ${darkMode? 'light':'dark'}`} ref={ref}>
             <div className={`insight-details ${isVisible? 'animate':''}`}>
                 <p>My personal website portfolio has achieved a performance score of <span>90</span> on mobile and <span>99</span> on desktop as evaluated by <Google /> PageSpeed Insights, reflecting a high level of optimization and responsiveness across platforms.</p>
                 <div className={`insight-tags ${isVisible? 'animate':''}`}>
