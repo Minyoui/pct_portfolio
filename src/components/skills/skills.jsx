@@ -7,6 +7,9 @@ import Business from '../../assets/Business.png';
 import Stack from '../../assets/Layers.png';
 import Bulb from '../../assets/bulb.png';
 import More from '../../assets/More.svg';
+import Close from '../../assets/Close.svg';
+import Model from '../../assets/pacot-model-two.png';
+import Download from '../../assets/Download.svg';
 
 //misc
 import React from '../../assets/misc/React.svg';
@@ -18,6 +21,7 @@ import Figma from '../../assets/misc/Figma.svg';
 import CSS3 from '../../assets/misc/CSS3.svg';
 import Canva from '../../assets/misc/Canva.svg';
 import Firebase from '../../assets/misc/Firebase.svg';
+import Idea from '../../assets/misc/Idea.png';
 
 function BranchLine({ height = "50px" }) {
     return (
@@ -65,7 +69,7 @@ function Skills () {
             branch: <BranchLine />
         },
         {
-            title:"Front-End Developer (Intern)",
+            title:"Full-Stack Developer (Intern)",
             subtitle:"Blissful Bali Spa",
             year:"2025",
             branch: <BranchLine />
@@ -85,7 +89,10 @@ function Skills () {
         'Leadership',
         'Programming',
         'Designing',
-        'Crafting'
+        'Drawing',
+        'Conflict Resolution',
+        'Problem-Solving',
+        'Adaptability'
     ];
 
     const techTools = [
@@ -100,12 +107,66 @@ function Skills () {
         { src: Canva, label: 'Canva'},
     ];
 
+    {/* FOR MODAL */}
+
+    const education = [
+        {
+            degree: "Bachelor of Science in Computer Engineering with Specialization in Software Development",
+            school: "De La Salle University of Dasmariñas Cavite",
+            year: "2021-2025"
+        },
+        {
+            degree: "STEM (Senior High School)",
+            school: "Cachapero Academe Inc.",
+            year: "2019-2021"
+        },
+        {
+            degree: "Junior High School",
+            school: "Imus Institute of Science & Technology Inc.",
+            year: "2015-2019"
+        },
+    ];
+
+    const skills = {
+        hard: [
+            'Computer Programming,',
+            'Front-End Development (React.js, HTML5, CSS3, JavaScript),',
+            'Web Design (Figma),',
+            'Computer Hardware Assembly,',
+            'PCB Design,',
+            'Soldering,',
+            'Professional Portrait Drawing'
+        ],
+        soft: [
+            'Creativity,',
+            'Communication,',
+            'Teamwork,',
+            'Leadership,',
+            'Conflict Resolution,',
+            'Problem-Solving,',
+            'Adaptability,',
+            'Emotional Intelligence'
+        ]
+    };
+
+    const additionalInfo = {
+        language: [
+            'Tagalog,',
+            'English'
+        ],
+
+        achievements: [
+            'Multimedia Artist of the Year (April 2020),',
+            'Best in Robotics Thesis (May 2019)'
+        ]
+    };
+
     return (
             <div className='skills-section-grid' id="skills" ref={ref}>
 
                 <div className={`skills-header ${isVisible? 'animate':''}`}> 
                     <p>Character Information</p>
-                    <button onClick={() => setModalOpen(true)}><img src={More} alt='More' loading="lazy"/></button>
+                    <button onClick={() => setModalOpen(true)}>More <img src={More} alt='More' loading="lazy"/></button>
                 </div>
 
                 <div className={`experience ${isVisible? 'animate':''}`} ref={ref}>
@@ -186,12 +247,77 @@ function Skills () {
                         ))}
                     </div>
                 </div>
+                
                 {/* MODALS */}
                 {isModalOpen && (
                     <div className='character-info-modal-overlay'>
                         <div className='modal-container'> 
+                            <motion.button 
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.7 }}
+                                className="close-btn" onClick={() => setModalOpen(false)}>
+                                <img src={Close} alt='Close Button' loading='lazy' aria-hidden="true" />
+                            </motion.button>
+                            <div className='modal-header'>
+                                <img src={Model} alt="Pacot Profile Picture" loading='lazy'
+                                    style={{width: "100px"}}
+                                />
+                                <div className='profile-information'>
+                                    <p style={{fontSize:"1.5rem", fontWeight:"bold"}}>PACOT, EVANE DELA CRUZ</p>
+                                    <p>evanepacot2002@gmail.com</p>
+                                    <p>(+63)947-631-8165</p>
+                                </div>
+                            </div>
+                            <motion.a
+                                whileHover={{scale: 1.1}}
+                                whileTap={{scale: 0.95}}
+                                href="/pacot-resume.pdf"
+                                download
+                                target='_blank'
+                                rel="noopener noreferrer"
+                                className='download-resume-btn'
+                            >
+                                Download Resume
+                                <img src={Download} alt="Download Icon" aria-hidden="true" loading='lazy'
+                                    style={{width:"20px", filter:"invert(1)"}}
+                                />
+                            </motion.a>
+
+                            <div className='modal-body'>
+                                <h1 style={{borderBottom:"solid 1px white"}}>SUMMARY</h1>
+                                <p>I am a graduate student from De La Salle University Dasmariñas, driven by a passion for technology and creativity. I specialize in front-end programming, with a strong passion for creating user-friendly and visually engaging web interfaces. Beyond coding, I bring a creative eye for UI design, allowing me to craft websites that are not only functional but also aesthetically appealing. I place great importance on user experience, ensuring that every website I design or develop is intuitive, responsive, and built with both form and function in mind.</p>
+                                <h1 style={{borderBottom:"solid 1px white"}}>EDUCATION</h1>
+                                {education.map((level, index) => (
+                                    <div key={index} className='education-section'>
+                                        <h3 style={{paddingRight:"100px"}}>{level.degree}</h3>
+                                        <p>{level.school}</p>
+                                        <span>{level.year}</span>
+                                    </div>
+                                ))}
+                                <h1 style={{borderBottom:"solid 1px white"}}>SKILLS</h1>
+                                <h3 className='modal-skills-section'>Hard Skills:
+                                    {skills.hard.map((info) => (
+                                        <span> {info} </span>
+                                    ))}
+                                </h3>
+                                <h3 className='modal-skills-section'>Soft Skills:
+                                    {skills.soft.map((info) => (
+                                        <span> {info} </span>
+                                    ))}
+                                </h3>
+                                <h1 style={{borderBottom:"solid 1px white"}}>ADDITIONAL INFORMATION</h1>
+                                <h3 className='add-info-section'>Language:
+                                    {additionalInfo.language.map((info) => (
+                                        <span> {info} </span>
+                                    ))}
+                                </h3>
+                                <h3 className='add-info-section'>Awards / Achievements: 
+                                    {additionalInfo.achievements.map((info) => (
+                                        <span> {info} </span>
+                                    ))}
+                                </h3>
+                            </div>
                         </div>
-                        <button onClick={() => setModalOpen(false)}>Close Modal</button>
                     </div>
                 )}
             </div>

@@ -87,19 +87,43 @@ function Projects () {
             indicator: <Deployed />,
             link: 'https://project-maison.vercel.app/',
             target: '_blank',
-            tags: [React, HTML5, CSS3, JavaScript, Firebase],
+            tags: [React, HTML5, CSS3, JavaScript, Firebase, Figma],
         },
 
         {
             id: 'project-two',
-            title: 'Coming Soon',
-            description: 'Work In Progress Project',
+            title: 'Pacot Portfolio',
+            description: 'A personal portfolio developed to showcase my skills and projects as a front-end developer.',
+            role: 'Full Stack Developer',
+            status: 'Deployed / Live',
+            indicator: <Deployed />,
+            link: 'https://pct-portfolio.vercel.app/',
+            target: '_blank',
+            tags: [React, HTML5, CSS3, JavaScript, Figma]
+        },
+
+        {
+            id: 'project-three',
+            title: 'QueueIt',
+            description: 'A smart queue management web application designed to streamline waiting lines and enhance customer experience.',
+            role: 'UI/UX & Front-End Developer',
+            status: 'Deployed / Live',
+            indicator: <Deployed />,
+            link: 'https://queueit-d6c2e.web.app/',
+            target: '_blank',
+            tags: [Figma, HTML5, CSS3]
+        },
+
+        {
+            id: 'project-four',
+            title: 'Jumies',
+            description: 'Pastry Business Website, Work In Progress',
             role:'Front-End Developer',
             status:'Work In Progress',
             indicator: <WIP />,
-            link: '#project-two',
+            link: '#project-four',
             target:'',
-            tags: [],
+            tags: [React, HTML5, CSS3, JavaScript, Figma],
         }
     ];
 

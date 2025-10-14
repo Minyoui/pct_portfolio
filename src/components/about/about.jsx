@@ -2,6 +2,9 @@ import './about.css';
 
 //assets
 import Model from '../../assets/pacot-model-two.png';
+import ModelOne from '../../assets/pacot-model-three.avif';
+import ModelTwo from '../../assets/pacot-model-four.avif';
+
 import Info from '../../assets/Info.png';
 
 function About () {

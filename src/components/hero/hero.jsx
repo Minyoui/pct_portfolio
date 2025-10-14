@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 
 //assets
 import Logo from '../../assets/pacot-logo-white.svg';
+import Download from '../../assets/Download.svg';
 
 function Hero () {
     return (
@@ -23,8 +24,23 @@ function Hero () {
                 <p style={{
                     textAlign:"center",
                     color:"rgba(255,255,255,0.6)",
-                }}>I specialize in Front-End Development</p>
-
+                }}>I am a Web Designer / Developer</p>
+                
+                <motion.a
+                    whileHover={{scale: 1.1}}
+                    whileTap={{scale: 0.95}}
+                    transition={{ duration: 0.3 }}
+                    href="/pacot-resume.pdf"
+                    download
+                    target='_blank'
+                    rel="noopener noreferrer"
+                    className='download-resume-btn-hero'
+                >
+                    Download Resume
+                    <img src={Download} alt="Download Icon" aria-hidden="true" loading='lazy'
+                        style={{width:"20px"}}
+                    />
+                </motion.a>
 
                 <p style={{
                     textAlign:"center",
