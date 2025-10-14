@@ -241,6 +241,11 @@ $lightCaptionColor: #8C8F9F;
     transition: all 0.3s ease;
 }
 
+.skills-section-grid.light .skills-value:hover {
+    color: $lightColor;
+    background-color: #4361EE;
+}
+
 .skills-value:hover {
     transform: translateY(-5px);
 }

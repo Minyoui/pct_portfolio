@@ -1,3 +1,25 @@
+$darkModeBackground: #2B2B2B;
+$darkModeCaptionColor: #9E9E9E;
+$darkDefaultColor: white;
+
+
+$lightModeBackground: #F4F5F9;
+$lightModeHeaderColor: #34363F;
+$lightDefaultColor: #565863;
+$lightContainerColor: #E7E8EF;
+
+%darkMode {
+    background: $darkModeBackground;
+    color: $darkDefaultColor;
+    transition: all 0.3s ease;
+}
+
+%lightMode {
+    background: $lightModeBackground;
+    color: $lightDefaultColor;
+    transition: all 0.3s ease;
+}
+
 .projects-section {
     width: 100%;
     height: fit-content;
@@ -12,15 +34,18 @@
 
 .projects-header {
     text-align: left;
-    color: white;
+    @extend %darkMode;
     width: 10%;
-    background-color: #2B2B2B;
     padding: 10px 30px;
     border-radius: 10px;
     font-size: 1rem;
     opacity: 0;
 
-    transition: all 1s ease;
+    transition: opacity 1s ease;
+}
+
+.projects-section.light .projects-header {
+    @extend %lightMode;
 }
 
 .project-box {
@@ -28,16 +53,20 @@
     display: flex;
     flex-direction: row;
     gap: 15px;
-    background-color: #2B2B2B;
+    background-color: $darkModeBackground;
     padding: 15px;
     border-radius: 10px;
     width: 100%;
     opacity: 0;
     transition: transform 0.3s ease, 
                 box-shadow 0.3s ease,
+                background-color 0.3s ease,
                 opacity 0.5s ease;
-    
 
+}
+
+.projects-section.light .project-box {
+    background-color: $lightModeBackground;
 }
 
 .link {
@@ -47,6 +76,11 @@
     height: 35px;
 
     display: none;
+    transition: filter 0.3s ease;
+}
+
+.projects-section.light .link {
+    filter: invert(1);
 }
 
 .project-box:hover {
@@ -89,6 +123,26 @@
     width: 100%;
 }
 
+.project-info h1 {
+    color: $darkDefaultColor;
+    transition: color 0.3s ease;
+}
+
+.project-info p {
+    color: $darkModeCaptionColor;
+    transition: color 0.3s ease;
+}
+
+.projects-section.light .project-info h1 {
+    color: $lightModeHeaderColor;
+}
+
+
+.projects-section.light .project-info p {
+    color: $lightDefaultColor;
+}
+
+
 .project-info {
     display: block;
     padding: 20px;
@@ -103,6 +157,11 @@
 
     display: flex;
     flex-direction: column;
+    transition: background-color 0.3s ease;
+}
+
+.projects-section.light .additional-info {
+    background-color: $lightContainerColor;
 }
 
 .role-status {
@@ -130,6 +189,10 @@
     box-shadow: inset 0 1px 5px rgba(0,0,0,0.8);
     background-color: #777777;
     color: white;
+}
+
+.projects-section.light .role-status p:hover {
+    background-color: #4361EE;
 }
 
 .role-text {

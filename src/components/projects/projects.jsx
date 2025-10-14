@@ -1,6 +1,8 @@
-import './projects.css';
+import './projects.scss';
 import { useState, useEffect, useRef } from 'react';
 
+//DarkMode 
+import { useDarkMode } from '../../context/DarkModeContext';
 
 //assets
 import React from '../../assets/misc/React.svg';
@@ -60,6 +62,7 @@ function WIP({
 
 function Projects () {
     const [isVisible, setIsVisible] = useState(false);
+    const { darkMode } = useDarkMode();
     const ref = useRef(null);
 
     useEffect(() => {
@@ -132,8 +135,7 @@ function Projects () {
     ];
 
     return (
-        <>
-            <div className='projects-section' id="projects" ref={ref} >
+            <div className={`projects-section ${darkMode? 'light':'dark'}`} id="projects" ref={ref} >
                 <p className={`projects-header ${isVisible? 'animate' : ''}`} >Projects</p>
                 {projectsData.map((project) => (
                     <a 
@@ -153,8 +155,8 @@ function Projects () {
                             }}/>
                         <div className='project-container'>
                             <div className='project-info'>
-                                <h1 style={{color:"white"}}>{project.title}</h1>
-                                <p style={{color:"white", textAlign:"left"}}>{project.description}</p>
+                                <h1>{project.title}</h1>
+                                <p style={{ textAlign:"left"}}>{project.description}</p>
                             </div>
                             <div className='additional-info'>
                                 <div className='role-status'>
@@ -171,7 +173,6 @@ function Projects () {
                     </a>
                 ))}
             </div>
-        </>
     )
 }
 
