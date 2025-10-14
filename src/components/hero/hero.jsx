@@ -1,14 +1,18 @@
-import './hero.css';
+import './hero.scss';
 import { motion } from "motion/react";
+
+//DarkMode
+import { useDarkMode } from '../../context/DarkModeContext';
 
 //assets
 import Logo from '../../assets/pacot-logo-white.svg';
 import Download from '../../assets/Download.svg';
 
 function Hero () {
+    const { darkMode } = useDarkMode();
+
     return (
-        <>
-            <div className='hero-section' id="home">
+            <div className={`hero-section ${darkMode? 'light':'dark'}`} id="home">
                 <img src={Logo} alt="pacot logo"
                     style={{
                         width:"100px"
@@ -50,7 +54,6 @@ function Hero () {
                     bottom:"30px",
                 }}>Original Photo by Evane Pacot (Shot using DJI Mini 3)</p>
             </div>
-        </>
     )
 }
 

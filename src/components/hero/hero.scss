@@ -1,9 +1,14 @@
+$darkCaptionColor: #D9D9D9;
+$darkDefaultColor: white;
+$darkModeBackgroundImage: url("../../assets/DJI_0217.JPG");
+$lightModeBackgroundImage: url("../../assets/DJI_0218.JPG");
+
 .hero-section {
     width: 100%;
     min-height: 100vh;
     min-height: 100dvh;
     padding: 100px 0px;
-    background-image: url("../../assets/DJI_0217.JPG");
+    background-image: $darkModeBackgroundImage;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,10 +20,15 @@
     align-items: center;
     justify-content: center;
     gap: 15px;
+    transition: background-image 0.3s ease;
+}
+
+.hero-section.light {
+    background-image: $lightModeBackgroundImage;
 }
 
 .hero-section h1{
-    color: white;
+    color: $darkDefaultColor;
     font-family: 'Oooh Baby','cursive';
     font-weight: 400;
     font-style: normal;
@@ -33,8 +43,8 @@
     display: flex;
     gap: 10px;
     align-items: center;
-    color: #D9D9D9;
-    border: solid 1px #D9D9D9;
+    color: $darkCaptionColor;
+    border: solid 1px $darkCaptionColor;
     border-radius: 5px;
     font-size: 0.8rem;
 }
@@ -52,27 +62,6 @@
     gap: 50px;
 }
 
-.summary-box {
-    background-color: transparent;
-    border: solid 1px rgba(255,255,255,0.5);
-    border-radius: 10px;
-    padding: 20px;
-    gap: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.summary-box p {
-    color:rgb(184, 184, 184);
-    font-size: 0.8rem;
-}
-
-.summary-box span {
-    color: white;
-    font-size: 3rem;
-    font-weight: bold;
-}
 
 @keyframes fadeInBg {
     from {
