@@ -178,7 +178,7 @@ function Skills () {
 
                 <div className={`skills-header ${isVisible? 'animate':''}`}> 
                     <p>Character Information</p>
-                    <button onClick={() => setModalOpen(true)}>More <img src={More} alt='More' loading="lazy"/></button>
+                    <button onClick={() => setModalOpen(true)}>More <img src={More} alt='More Button' aria-hidden="true" loading="lazy"/></button>
                 </div>
 
                 <div className={`experience ${isVisible? 'animate':''}`} ref={ref}>

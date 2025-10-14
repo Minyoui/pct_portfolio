@@ -49,12 +49,12 @@ function About () {
                     </div>
 
                 </div>
-                <motion.img src={ModelOne} alt="Pacot Photo Two" aria-hidden="true" loading='lazy' id="modelOne"
+                <motion.img src={ModelOne} alt="Pacot Photo Two" loading='lazy' id="modelOne"
                     style={{opacity:"50%", filter:"blur(3px)"}}
                     whileHover={{scale: 1.1, opacity: 1, filter: "blur(0px)", zIndex:"3"}}
                     whileTap={{scale: 1.1, opacity: 1, filter: "blur(0px)", zIndex:"3"}}
                 />
-                <motion.img src={ModelTwo} alt="Pacot Photo One" aria-hidden="true" loading='lazy' id="modelTwo"
+                <motion.img src={ModelTwo} alt="Pacot Photo One" loading='lazy' id="modelTwo"
                     style={{opacity:"100%", filter:"blur(0.5px)", zIndex:"2"}}
                     whileHover={{scale: 1.1, opacity: 1, filter: "blur(0px)", zIndex:"3"}}
                     whileTap={{scale: 1.1, opacity: 1, filter: "blur(0px)", zIndex:"3"}}
