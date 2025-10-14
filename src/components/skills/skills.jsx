@@ -2,6 +2,9 @@ import './skills.scss';
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+//DarkMode
+import { useDarkMode } from '../../context/DarkModeContext';
+
 //assets
 import Business from '../../assets/Business.png';
 import Stack from '../../assets/Layers.png';
@@ -29,10 +32,11 @@ import Tailwind from '../../assets/misc/Tailwind CSS.svg';
 function BranchLine({ height = "50px" }) {
     return (
         <div 
+
+            className='branchLine'
             style={{
                 width:"1px",
                 height,
-                backgroundColor:"rgba(255,255,255,0.5)",
                 marginLeft:"4px"
             }}
         />
@@ -43,6 +47,7 @@ function Skills () {
     const [isHovered, setIsHovered] = useState(null);
     const [isVisible, setIsVisible] = useState(false);
     const [isModalOpen, setModalOpen] = useState(false);
+    const { darkMode } = useDarkMode();
     const ref = useRef(null);
 
     useEffect(() => {
@@ -169,7 +174,7 @@ function Skills () {
     };
 
     return (
-            <div className='skills-section-grid' id="skills" ref={ref}>
+            <div className={`skills-section-grid ${darkMode? 'light':'dark'}`} id="skills" ref={ref}>
 
                 <div className={`skills-header ${isVisible? 'animate':''}`}> 
                     <p>Character Information</p>
@@ -263,7 +268,7 @@ function Skills () {
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.7 }}
                                 className="close-btn" onClick={() => setModalOpen(false)}>
-                                <img src={Close} alt='Close Button' loading='lazy' aria-hidden="true" />
+                                <img src={Close} alt='Close Button' style={{width:"50px"}} loading='lazy' aria-hidden="true" />
                             </motion.button>
                             <div className='modal-header'>
                                 <img src={Model} alt="Pacot Profile Picture" loading='lazy'
@@ -291,9 +296,9 @@ function Skills () {
                             </motion.a>
 
                             <div className='modal-body'>
-                                <h1 style={{borderBottom:"solid 1px white"}}>SUMMARY</h1>
+                                <h1>SUMMARY</h1>
                                 <p>I am a graduate student from De La Salle University Dasmariñas, driven by a passion for technology and creativity. I specialize in front-end programming, with a strong passion for creating user-friendly and visually engaging web interfaces. Beyond coding, I bring a creative eye for UI design, allowing me to craft websites that are not only functional but also aesthetically appealing. I place great importance on user experience, ensuring that every website I design or develop is intuitive, responsive, and built with both form and function in mind.</p>
-                                <h1 style={{borderBottom:"solid 1px white"}}>EDUCATION</h1>
+                                <h1>EDUCATION</h1>
                                 {education.map((level, index) => (
                                     <div key={index} className='education-section'>
                                         <h3 style={{paddingRight:"100px"}}>{level.degree}</h3>
@@ -301,7 +306,7 @@ function Skills () {
                                         <span>{level.year}</span>
                                     </div>
                                 ))}
-                                <h1 style={{borderBottom:"solid 1px white"}}>SKILLS</h1>
+                                <h1>SKILLS</h1>
                                 <h3 className='modal-skills-section'>Hard Skills:
                                     {skills.hard.map((info) => (
                                         <span> {info} </span>
@@ -312,7 +317,7 @@ function Skills () {
                                         <span> {info} </span>
                                     ))}
                                 </h3>
-                                <h1 style={{borderBottom:"solid 1px white"}}>ADDITIONAL INFORMATION</h1>
+                                <h1>ADDITIONAL INFORMATION</h1>
                                 <h3 className='add-info-section'>Language:
                                     {additionalInfo.language.map((info) => (
                                         <span> {info} </span>

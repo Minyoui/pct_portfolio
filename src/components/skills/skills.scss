@@ -4,6 +4,32 @@ $lightColor: #fff;
 $lighterColor: #D9D9D9;
 $defaultBorderRadius: 10px;
 
+$darkModeBackground: #2B2B2B;
+$darkModeCaptionColor: #9E9E9E;
+$darkDefaultColor: white;
+
+
+$lightModeBackground: #F4F5F9;
+$lightModeHeaderColor: #34363F;
+$lightDefaultColor: #565863;
+$lightCaptionColor: #8C8F9F;
+
+%darkMode {
+    background: $darkModeBackground;
+    color: $darkDefaultColor;
+    transition: all 0.3s ease;
+}
+
+%lightModeOne {
+    background: $lightModeBackground;
+    color: $lightDefaultColor;
+}
+
+%lightModeTwo {
+    background: $lightModeBackground;
+    color: $lightCaptionColor;
+}
+
 .skills-section-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -33,6 +59,11 @@ $defaultBorderRadius: 10px;
     overflow: hidden;
 }
 
+.skills-section-grid.light .skills-header {
+    @extend %lightModeTwo;
+    transition: background-color 0.3s ease;
+}
+
 .skills-header,
 .skills-header button {
     opacity: 0;
@@ -44,7 +75,11 @@ $defaultBorderRadius: 10px;
     align-items: center;
     gap: 5px;
     
-    transition: all 1s ease;
+    transition: opacity 1s ease;
+}
+
+.skills-section-grid.light .skills-header button {
+    color: $lightCaptionColor;
 }
 
 .skills-header button {
@@ -62,7 +97,27 @@ $defaultBorderRadius: 10px;
     width: 30px;
 }
 
-.skills-section-grid img {
+.skills-section-grid.light .skills-header button img {
+    filter: invert(1);
+}
+
+.experience img,
+.tech-stack img,
+.skills img {
+    width: 50px;
+    transition: all 0.3s ease;
+}
+
+.skills-section-grid.light {
+    .experience img,
+    .tech-stack img,
+    .skills img {
+        filter: invert(1);
+    }
+}
+
+.tech-tools img {
+    filter: invert(0) !important;
     width: 50px;
 }
 
@@ -73,7 +128,14 @@ $defaultBorderRadius: 10px;
     padding: 25px;
     border-radius: $defaultBorderRadius;
     background-color: $darkColor;
-    transition: all 1s ease;
+    transition: opacity 1s ease;
+}
+
+.skills-section-grid.light .experience,
+.skills-section-grid.light .tech-stack,
+.skills-section-grid.light .skills {
+    @extend %lightModeOne;
+    transition: background-color 0.3s ease;
 }
 
 .experience h1,
@@ -135,6 +197,21 @@ $defaultBorderRadius: 10px;
     height: 12px;
     background-color: $lightColor;
     border-radius: 50%;
+
+    transition: background-color 0.3s ease;
+}
+
+.branchLine {
+    background-color: rgba(255,255,255,0.5);
+}
+
+.skills-section-grid.light .branchLine {
+    background-color: $lightDefaultColor;
+    opacity: 25%;
+}
+
+.skills-section-grid.light .timeline-dot {
+    background-color: $lightDefaultColor;
 }
 
 
@@ -204,6 +281,12 @@ $defaultBorderRadius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    transition: all 0.3s ease;
+}
+
+.skills-section-grid.light .modal-container {
+    @extend %lightModeOne;
 }
 
 .modal-container::-webkit-scrollbar {
@@ -256,6 +339,12 @@ $defaultBorderRadius: 10px;
 
 .modal-body h1 {
     font-weight: normal;
+    border-bottom: solid 1px $darkDefaultColor;
+    transition: border-bottom 0.3s ease;
+}
+
+.skills-section-grid.light .modal-body h1 {
+    border-bottom: solid 1px $lightDefaultColor;
 }
 
 .modal-skills-section span,
