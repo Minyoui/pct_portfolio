@@ -9,7 +9,11 @@ import CSS3 from '../../assets/misc/CSS3.svg';
 import JavaScript from '../../assets/misc/JavaScript.svg';
 import Figma from '../../assets/misc/Figma.svg';
 import Firebase from '../../assets/misc/Firebase.svg';
+import Motion from '../../assets/misc/motion.png';
 import ExternalLink from '../../assets/External Link.png';
+import Arduino from '../../assets/misc/Arduino.svg';
+import Sass from '../../assets/misc/Sass.svg';
+import Tailwind from '../../assets/misc/Tailwind CSS.svg';
 
 function Deployed({
 
@@ -99,7 +103,7 @@ function Projects () {
             indicator: <Deployed />,
             link: 'https://pct-portfolio.vercel.app/',
             target: '_blank',
-            tags: [React, HTML5, CSS3, JavaScript, Figma]
+            tags: [React, HTML5, CSS3, Sass, JavaScript, Figma, Motion]
         },
 
         {
@@ -123,7 +127,7 @@ function Projects () {
             indicator: <WIP />,
             link: '#project-four',
             target:'',
-            tags: [React, HTML5, CSS3, JavaScript, Figma],
+            tags: [React, HTML5, CSS3, Tailwind, JavaScript, Figma],
         }
     ];
 
@@ -154,8 +158,7 @@ function Projects () {
                             </div>
                             <div className='additional-info'>
                                 <div className='role-status'>
-                                    <p><strong>Role:</strong> {project.role}</p>
-                                    <div style={{ backgroundColor:"rgba(255,255,255,0.8)", height:"30px", width:"1px"}}/>
+                                    <p className='role-text'><strong>Role:</strong> {project.role}</p>
                                     <p><strong>Status:</strong> {project.status} {project.indicator}</p>
                                 </div>
                                 <div className='project-tags'>

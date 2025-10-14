@@ -25,6 +25,7 @@
     background-color: white;
     height: 30px;
 }
+
 .logo {
     width: 30px;
 }
@@ -52,9 +53,11 @@
     opacity: 100%;
 }
 
-.navigation {
+.navigation,
+.nav-tabs {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 30px;
 }
 
 .navigation a {
@@ -89,7 +92,7 @@
     top: 15px;
     height: 50px;
     width: 60%;
-    max-width: 150px;
+    max-width: 125px;
     border-radius: 1000px;
     align-items: center;
     justify-content: space-around;
@@ -127,5 +130,10 @@
 @media (max-width:720px) {
     .social-media-icons {
         display: none;
+    }
+
+    .navigation,
+    .nav-tabs {
+        gap: 15px;
     }
 }

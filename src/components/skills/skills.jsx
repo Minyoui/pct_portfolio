@@ -1,4 +1,4 @@
-import './skills.css';
+import './skills.scss';
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -21,7 +21,10 @@ import Figma from '../../assets/misc/Figma.svg';
 import CSS3 from '../../assets/misc/CSS3.svg';
 import Canva from '../../assets/misc/Canva.svg';
 import Firebase from '../../assets/misc/Firebase.svg';
-import Idea from '../../assets/misc/Idea.png';
+import Motion from '../../assets/misc/motion.png';
+import Arduino from '../../assets/misc/Arduino.svg';
+import Sass from '../../assets/misc/Sass.svg';
+import Tailwind from '../../assets/misc/Tailwind CSS.svg';
 
 function BranchLine({ height = "50px" }) {
     return (
@@ -100,11 +103,15 @@ function Skills () {
         { src: JavaScript, label: 'JavaScript'},
         { src: HTML5, label: 'HTML5'},
         { src: CSS3, label: 'CSS3'},
+        { src: Sass, label: 'Sass'},
+        { src: Tailwind, label: 'Tailwind'},
+        { src: Motion, label: 'Motion'},
         { src: Figma, label: 'Figma'},
         { src: VisualStudio, label: 'Visual Studio Code'},
         { src: GitHub, label: 'Github'},
         { src: Firebase, label: 'Firebase'},
         { src: Canva, label: 'Canva'},
+        { src: Arduino, label: 'Arduino'},
     ];
 
     {/* FOR MODAL */}

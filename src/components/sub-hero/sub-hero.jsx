@@ -12,14 +12,14 @@ function SubHero () {
                     <span>Years of Experience</span>
                 </div>
                 <div className='container'>
-                    <p>2</p>
+                    <p>3</p>
                     <span>Projects Completed</span>
                 </div>
                 <div className='container' style={{
                     borderTopRightRadius:"0px",
                     borderBottomRightRadius:"0px",
                 }}>
-                    <p>8</p>
+                    <p>13</p>
                     <span>Technology Stack</span>
                 </div>
             </div>

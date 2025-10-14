@@ -16,7 +16,7 @@
     width: 10%;
     background-color: #2B2B2B;
     padding: 10px 30px;
-    border-radius: 15px;
+    border-radius: 10px;
     font-size: 1rem;
     opacity: 0;
 
@@ -30,7 +30,7 @@
     gap: 15px;
     background-color: #2B2B2B;
     padding: 15px;
-    border-radius: 15px;
+    border-radius: 10px;
     width: 100%;
     opacity: 0;
     transition: transform 0.3s ease, 
@@ -132,13 +132,21 @@
     color: white;
 }
 
+.role-text {
+    border-right: solid 1px rgba(255,255,255,0.3);
+}
+
 .project-tags {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    overflow-x: auto;
+    white-space: nowrap;
+
     height: 100%;
-    gap: 50px;
-    padding: 0 20px;
+    padding: 0 40px;
+    gap: 2rem;
 }
 
 
@@ -201,12 +209,21 @@
     }
 
     .link {
-        bottom: 225px;
+        top: 325px;
     }
 
     .project-tags {
         padding: 20px;
-        overflow:scroll;
+        justify-content: flex-start;
+    }
+
+    .project-tags::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    .project-tags::-webkit-scrollbar-thumb {
+        background-color: #777777;
+        border-radius: 10px;
     }
 
     .role-status {
@@ -215,5 +232,15 @@
 
     .role-status p {
         font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .role-status {
+        flex-direction: column;
+    }
+    .role-text {
+        border-right: none;
+        border-bottom: solid 1px rgba(255,255,255,0.3);
     }
 }

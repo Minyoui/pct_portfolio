@@ -50,13 +50,14 @@ function Navbar () {
     return (
         <div className='nav-wrapper'>
             <div className={`navbar-container ${scrolled? 'scrolled':''}`}>
-                <a href="#home">
-                    <img src={LogoColor} alt="Profile Photo" className='logo'/>
-                </a>
-                <div className='menu-divider'/>
                 <img src={Menu} style={{width:"30px"}} className='menu-icon'/>
-                <ul>
-                    <li className='navigation'>
+                <ul  className='navigation'>
+                    <li>
+                        <a href="#home">
+                            <img src={LogoColor} alt="Profile Photo" className='logo'/>
+                        </a>
+                    </li>
+                    <li className='nav-tabs'>
                         <a href="#about"><div className="underline" style={{backgroundColor:"white",height:"1px"}}/>About</a>
                         <a href="#skills"><div className="underline" style={{backgroundColor:"white",height:"1px"}}/>Skills</a>
                         <a href="#projects"><div className="underline" style={{backgroundColor:"white",height:"1px"}}/>Projects</a>

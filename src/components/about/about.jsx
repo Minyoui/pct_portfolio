@@ -1,4 +1,5 @@
 import './about.css';
+import { motion } from 'motion/react';
 
 //assets
 import Model from '../../assets/pacot-model-two.png';
@@ -11,11 +12,11 @@ function About () {
     const expertise = [
         'HTML5 & CSS3 Expertise',
         "Performance Optimization",
-        "Responsive Web Design"
+        "Responsive Web Design",
+        "Mobile First Approach"
     ];
 
     return (
-        <>
             <div className='about-section' id="about">
                 <div className='profile-description'>
                     <p style={{
@@ -31,7 +32,7 @@ function About () {
                         textAlign:"left",
                         fontSize:"1.5rem",
                         color:"#9c9c9cff"
-                    }}>Through my diverse experiences, I have cultivated a strong work ethic and an eagerness to learn and adapt to new challenges. My goal is to contribute meaningfully to projects that blend innovation, aesthetic and functionality. I thrive in environments where I can collaborate with others and continue to grow as a professional.</p>
+                    }}>With my skills, I have cultivated a strong work ethic and an eagerness to learn and adapt to new challenges. My goal is to contribute meaningfully to projects that blend innovation, aesthetic and functionality. I thrive in environments where I can collaborate with others and continue to grow as a professional.</p>
                     <p style={{fontWeight:"bold",fontSize:"1.2rem"}}>Key Expertise</p>
 
                     <div className='key-expertise'>
@@ -39,20 +40,24 @@ function About () {
                             <div className='tab-value' key={index} style={{
                                 backgroundColor:"#2B2B2B",
                             }}>
-                                <div style={{height:"10px",width:"10px", backgroundColor:"rgba(25,25,25)",borderRadius:"100px"}}/>
+                                <div style={{height:"10px",width:"10px", backgroundColor:"rgba(25,25,25)",borderRadius:"100%"}}/>
                                 {index}
                             </div>
                         ))}
                     </div>
 
                 </div>
-                <img src={Model} alt="Profile Photo" loading='lazy'
-                    style={{
-                        outline:"solid 5px white",
-                        borderRadius:"100%",
-                    }} className='profile'/> 
+                <motion.img src={ModelOne} alt="Pacot Photo Two" aria-hidden="true" loading='lazy' id="modelOne"
+                    style={{opacity:"50%", filter:"blur(3px)"}}
+                    whileHover={{scale: 1.1, opacity: 1, filter: "blur(0px)", zIndex:"3"}}
+                    whileTap={{scale: 1.1, opacity: 1, filter: "blur(0px)", zIndex:"3"}}
+                />
+                <motion.img src={ModelTwo} alt="Pacot Photo One" aria-hidden="true" loading='lazy' id="modelTwo"
+                    style={{opacity:"100%", filter:"blur(0.5px)", zIndex:"2"}}
+                    whileHover={{scale: 1.1, opacity: 1, filter: "blur(0px)", zIndex:"3"}}
+                    whileTap={{scale: 1.1, opacity: 1, filter: "blur(0px)", zIndex:"3"}}
+                />
             </div>
-        </>
     )
 }
 
