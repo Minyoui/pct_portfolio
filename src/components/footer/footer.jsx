@@ -1,8 +1,11 @@
-import './footer.css';
+import './footer.scss';
 import { motion } from 'motion/react'
 
 //assets
 import Logo from '../../assets/pacot-logo-colored.svg';
+
+//DarkMode
+import { useDarkMode } from '../../context/DarkModeContext';
 
 //logos
 import Facebook from '../../assets/Facebook.svg';
@@ -12,6 +15,7 @@ import Jobstreet from '../../assets/Jobstreet.svg';
 import LinkedIn from '../../assets/LinkedIn.svg';
 
 function Footer () {
+    const { darkMode } = useDarkMode();
     const socialLinks = [
             {src: Facebook, link:"https://www.facebook.com/evane.pacot/", label:"Facebook"},
             {src: Instagram, link:"https://www.instagram.com/evn_dc_pct/", label:"Instagram"},
@@ -21,8 +25,7 @@ function Footer () {
         ]
 
     return (
-        <>
-            <div className='footer-section'>
+            <div className={`footer-section ${darkMode? 'light':'dark'}`}>
                 <a href="#home" className='footer-logo'>
                     <img src={Logo} alt="Pacot Logo" loading="lazy"/>
                     <span>PACOT</span>
@@ -40,12 +43,10 @@ function Footer () {
                     ))}
                 </div>
                 <p className="footer-ownership" style={{
-                    textAlign:"center",
-                    color:"white",
+                    textAlign:"center"
                     }}
-                >© Evane Pacot 2025, All rights reserved. Icons by <a href="https://icons8.com" target="_blank" style={{textDecoration:"none", color:"white", fontWeight:"800"}}>Icons8</a></p>
+                >© Evane Pacot 2025, All rights reserved. Icons by <a href="https://icons8.com" target="_blank" style={{textDecoration:"none", fontWeight:"800"}}>Icons8</a></p>
             </div>
-        </>
     )
 }
 
