@@ -1,3 +1,14 @@
+$darkModeBackground: #2B2B2B;
+$darkModeCaptionColor: #9E9E9E;
+$darkDefaultColor: white;
+
+
+$lightModeBackground: #F4F5F9;
+$lightContainerColor: #E7E8EF;
+$lightModeHeaderColor: #34363F;
+$lightDefaultColor: #565863;
+
+
 .contact-section {
     width: 100%;
     height: fit-content;
@@ -36,17 +47,29 @@
 }
 
 .contact-header p{
-    color: #9E9E9E;
+    color: $darkModeCaptionColor;
     text-align: left;
     letter-spacing: 1px;
+    
+    transition: color 0.3s ease;
+}
+
+.contact-section.light .contact-header p {
+    color: $lightDefaultColor;
 }
 
 .contact-details {
     width: 100%;
     align-items: center;
     font-weight: normal;
-    color: white;
+    color: $darkDefaultColor;
     font-size: 1rem;
+
+    transition: color 0.3s ease;
+}
+
+.contact-section.light .contact-details {
+    color: $lightDefaultColor;
 }
 
 .contact-details p {
@@ -55,23 +78,34 @@
     gap: 10px;
 }
 
-.contact-details p img {
+.contact-details img {
     width: 30px;
+    transition: filter 0.3s ease;
+}
+
+.contact-section.light .contact-details img {
+    filter: invert(1);
 }
 
 .contact-header h1 {
     font-family: 'Oooh baby','sans-serif';
     font-weight: normal;
     text-align: center;
-    color: white;
+    color: $darkDefaultColor;
     font-size: 4rem;
+
+    transition: color 0.3s ease;
+}
+
+.contact-section.light .contact-header h1 {
+    color: $lightModeHeaderColor;
 }
 
 .form-message::placeholder,
 .form-name,
 .form-email {
     font-family: 'Nunito','sans-serif';
-    color: white;
+    color: $darkDefaultColor;
     font-size: 14px;
 }
 
@@ -87,11 +121,34 @@
     );
     border: none;
     border-radius: 5px;
-    color: white;
     font-family: 'Nunito','sans-serif';
-    color: white;
+    color: $darkDefaultColor;
     font-size: 14px;
     resize: none;
+
+}
+
+.contact-section.light {
+    .contact-form button img {
+        filter:invert(1);
+    }
+
+    .form-message::placeholder,
+    .form-name,
+    .form-email {
+        color: $lightDefaultColor;
+    }
+
+    .form-message,
+    .contact-form input,
+    .contact-form button {
+        background: linear-gradient(
+            to right,
+            $lightContainerColor,
+            #fefefe
+        );
+        color: $lightDefaultColor;
+    }
 }
 
 .contact-form button {
@@ -193,7 +250,16 @@
     .form-email input,
     .form-message,
     .contact-form button {
-        background: #2B2B2B;
+        background: $darkModeBackground;
+    }
+
+    .contact-section.light {
+        .form-name input,
+        .form-email input,
+        .form-message,
+        .contact-form button {
+            background: $lightContainerColor;
+        }
     }
 
     .contact-form button:hover {

@@ -1,5 +1,8 @@
-import './contact.css';
+import './contact.scss';
 import { useState, useEffect, useRef } from 'react';
+
+//DarkMode
+import { useDarkMode } from '../../context/DarkModeContext';
 
 //assets
 import Send from '../../assets/Email Send.svg';
@@ -9,6 +12,7 @@ import Location from '../../assets/Address.svg';
 
 function Contact () {
     const [isVisible, setIsVisible] = useState(false);
+    const { darkMode } = useDarkMode();
     const ref = useRef(null);
 
 
@@ -32,7 +36,7 @@ function Contact () {
     }, []);
 
     return (
-        <div className='contact-section' id="contact">
+        <div className={`contact-section ${darkMode? 'light':'dark'}`} id="contact">
             <div className='contact-information'>
                 <div className='contact-header'>
                     <h1>Let's get in Touch!</h1>
@@ -50,7 +54,7 @@ function Contact () {
                     <label>Name</label>
                 </div>
                 <div className='form-email'>
-                    <input type="text" placeholder=" " required/>
+                    <input type="email" placeholder=" " required/>
                     <label>Email</label>
                 </div>
                 <textarea className="form-message" placeholder="Your Message Here ..." required/>
