@@ -88,7 +88,9 @@ $lightContainerColor: #E7E8EF;
     box-shadow: 0 10px 15px rgba(0,0,0,0.3);
 }
 
-.project-box:hover .project-one {
+.project-box:hover .project-one,
+.project-box:hover .project-two,
+.project-box:hover .project-three {
     filter: grayscale(0);
 }
 
@@ -108,7 +110,17 @@ $lightContainerColor: #E7E8EF;
 }
 
 .project-two {
-    background-image: url("../../assets/Maison-D-thumbnail.jpg");
+    background-image: url("../../assets/Pacot-Portfolio-Thumbnail.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(1);
+
+    transition: filter 0.3s ease;
+}
+
+.project-three {
+    background-image: url("../../assets/QueueIt-Thumbnail.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -267,7 +279,9 @@ $lightContainerColor: #E7E8EF;
         display: inline;
     }
 
-    .project-one {
+    .project-one,
+    .project-two,
+    .project-three {
         filter: grayscale(0);
     }
 
