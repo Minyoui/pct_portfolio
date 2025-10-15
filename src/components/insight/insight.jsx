@@ -52,7 +52,7 @@ function Insight () {
     return (
         <div className={`insight-section ${darkMode? 'light':'dark'}`} ref={ref}>
             <div className={`insight-details ${isVisible? 'animate':''}`}>
-                <p>My personal website portfolio has achieved a performance score of <span>90</span> on mobile and <span>99</span> on desktop as evaluated by <Google /> PageSpeed Insights, reflecting a high level of optimization and responsiveness across platforms.</p>
+                <p>My personal website portfolio has achieved a performance score of <span style={{color:"#eebf5bff"}}>76</span> on mobile and <span style={{color:"#8BC34A"}}>96</span> on desktop as evaluated by <Google /> PageSpeed Insights, reflecting a high level of optimization and responsiveness across different platforms.</p>
                 <div className={`insight-tags ${isVisible? 'animate':''}`}>
                     <div className='multiple-devices'>
                         <img src={MultipleDevice} alt='Multiple Devices Icon' loading='lazy'/>
