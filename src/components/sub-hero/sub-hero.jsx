@@ -9,7 +9,7 @@ function SubHero () {
     return (
             <div className={`sub-hero-section ${darkMode? 'light' : 'dark'}`}>
                 <div className='container'>
-                    <p>2</p>
+                    <p>1.5</p>
                     <span>Years of Experience</span>
                 </div>
                 <div className='container'>
