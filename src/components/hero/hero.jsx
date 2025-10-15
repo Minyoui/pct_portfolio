@@ -34,7 +34,7 @@ function Hero () {
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.95}}
                     transition={{ duration: 0.3 }}
-                    href="/pacot-resume.pdf"
+                    href="Pacot Resume.pdf"
                     download
                     target='_blank'
                     rel="noopener noreferrer"

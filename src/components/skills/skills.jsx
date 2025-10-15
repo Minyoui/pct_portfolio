@@ -283,7 +283,7 @@ function Skills () {
                             <motion.a
                                 whileHover={{scale: 1.1}}
                                 whileTap={{scale: 0.95}}
-                                href="/pacot-resume.pdf"
+                                href="/Pacot Resume.pdf"
                                 download
                                 target='_blank'
                                 rel="noopener noreferrer"
