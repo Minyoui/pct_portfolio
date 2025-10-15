@@ -50,12 +50,12 @@ function Contact () {
             </div>
             <form className={`contact-form ${isVisible? 'animate':''}`} ref={ref}>
                 <div className='form-name'>
-                    <input type="text" placeholder=" " required/>
-                    <label>Name</label>
+                    <input type="text" placeholder=" " id="name" required/>
+                    <label for="name">Name</label>
                 </div>
                 <div className='form-email'>
-                    <input type="email" placeholder=" " required/>
-                    <label>Email</label>
+                    <input type="email" placeholder=" " id="email" required/>
+                    <label for="email">Email</label>
                 </div>
                 <textarea className="form-message" placeholder="Your Message Here ..." required/>
                 <button type="submit"><img src={Send} alt="send-icon"/>Submit</button>

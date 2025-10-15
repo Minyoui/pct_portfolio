@@ -190,7 +190,7 @@ function Skills () {
                                     <div className='timeline-dot'/>
                                     <div className='timeline-content'>
                                         <div className='timeline-header'>
-                                            <h3 className='timeline-role'>{exp.title}</h3>
+                                            <p className='timeline-role'>{exp.title}</p>
                                             <span className='timeline-year'>{exp.year}</span>
                                         </div>
                                         <p className='timeline-subtitle'>{exp.subtitle}</p>

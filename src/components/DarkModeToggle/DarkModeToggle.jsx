@@ -10,7 +10,8 @@ const DarkModeToggle = () => {
       onClick={() => setDarkMode(!darkMode)}
       className={`dark-toggle-button ${darkMode ? 'light' : 'dark'}`}
       type="button"
-      alt="Dark Mode Toggle"
+      id="toggle-btn"
+      aria-label="Theme Toggle Button"
     >
       <div className='sun' />
       <div className='moon' />
