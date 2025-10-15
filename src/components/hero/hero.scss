@@ -25,6 +25,9 @@ $lightModeBackgroundImage: url("../../assets/DJI_0218.JPG");
 
 .hero-section.light {
     background-image: url("../../assets/DJI_0218.JPG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-section h1{
