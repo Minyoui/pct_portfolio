@@ -66,7 +66,7 @@ function Navbar () {
                             href={link.link}
                             target="_blank"
                         >
-                            <img src={link.src} alt={link.label}/>
+                            <img src={link.src} alt={link.label} loading='lazy'/>
                         </motion.a>
                     ))}
                 </div>  

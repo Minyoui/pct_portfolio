@@ -58,7 +58,7 @@ function Contact () {
                     <label for="email">Email</label>
                 </div>
                 <textarea className="form-message" placeholder="Your Message Here ..." required/>
-                <button type="submit"><img src={Send} alt="send-icon"/>Submit</button>
+                <button type="submit"><img src={Send} alt="send-icon" loading='lazy'/>Submit</button>
             </form>
         </div>
     )
