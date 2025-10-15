@@ -8,7 +8,7 @@ $lightModeBackgroundImage: url("../../assets/DJI_0218.JPG");
     min-height: 100vh;
     min-height: 100dvh;
     padding: 100px 0px;
-    background-image: $darkModeBackgroundImage;
+    background-image: url("../../assets/DJI_0217.JPG");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -24,7 +24,7 @@ $lightModeBackgroundImage: url("../../assets/DJI_0218.JPG");
 }
 
 .hero-section.light {
-    background-image: $lightModeBackgroundImage;
+    background-image: url("../../assets/DJI_0218.JPG");
 }
 
 .hero-section h1{
@@ -84,10 +84,3 @@ $lightModeBackgroundImage: url("../../assets/DJI_0218.JPG");
     }
 }
 
-/* MOBILE */
-
-@media(max-width:720px) {
-    .hero-section {
-        
-    }
-}
