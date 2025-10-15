@@ -270,6 +270,11 @@ $lightContainerColor: #E7E8EF;
 /* MOBILE */
 
 @media (max-width: 720px) {
+    .projects-section {
+        gap: 10px;
+        padding: 5px 10px;
+    }
+    
     .project-box {
         flex-direction: column;
         gap: 0px;

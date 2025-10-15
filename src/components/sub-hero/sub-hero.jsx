@@ -8,10 +8,7 @@ function SubHero () {
 
     return (
             <div className={`sub-hero-section ${darkMode? 'light' : 'dark'}`}>
-                <div className='container' style={{
-                    borderTopLeftRadius:"0px",
-                    borderBottomLeftRadius:"0px",
-                }}>
+                <div className='container'>
                     <p>2</p>
                     <span>Years of Experience</span>
                 </div>
@@ -19,10 +16,7 @@ function SubHero () {
                     <p>3</p>
                     <span>Projects Completed</span>
                 </div>
-                <div className='container' style={{
-                    borderTopRightRadius:"0px",
-                    borderBottomRightRadius:"0px",
-                }}>
+                <div className='container'>
                     <p>13</p>
                     <span>Technology Stack</span>
                 </div>

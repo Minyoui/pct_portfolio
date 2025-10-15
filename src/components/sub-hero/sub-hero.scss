@@ -24,8 +24,8 @@ $lightDefaultColor: #565863;
 
     display: flex;
     flex-wrap: wrap;
-    padding: 15px 0;
-    gap: 15px
+    padding: 10px 20px;
+    gap: 20px
 }
 
 .container {
@@ -79,5 +79,11 @@ $lightDefaultColor: #565863;
 /* MOBILE */
 
 @media(max-width: 720px) {
-    
+    .sub-hero-section {
+        gap: 10px;
+        padding: 5px 10px;
+    }
+    .container {
+        border-radius: 10px;
+    }
 }

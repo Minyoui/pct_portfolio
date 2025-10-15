@@ -13,13 +13,6 @@ import Info from '../../assets/Info.png';
 function About () {
     const { darkMode } = useDarkMode();
 
-    const expertise = [
-        'HTML5 & CSS3 Expertise',
-        "Performance Optimization",
-        "Responsive Web Design",
-        "Mobile First Approach"
-    ];
-
     return (
             <div className={`about-section ${darkMode? 'light':'dark'}`} id="about">
                 <div className='profile-description'>
@@ -33,32 +26,22 @@ function About () {
                         width:"40px",
                     }}/>About</p>
                     <p style={{
-                        textAlign:"left",
-                        fontSize:"1.5rem",
+
                         color:"#9c9c9cff"
                     }}>With my skills, I have cultivated a strong work ethic and an eagerness to learn and adapt to new challenges. My goal is to contribute meaningfully to projects that blend innovation, aesthetic and functionality. I thrive in environments where I can collaborate with others and continue to grow as a professional.</p>
-                    <p style={{fontWeight:"bold",fontSize:"1.2rem"}}>Key Expertise</p>
-
-                    <div className='key-expertise'>
-                        {expertise.map((index) => (
-                            <div className='tab-value' key={index}>
-                                <div style={{height:"10px",width:"10px",borderRadius:"100%"}}/>
-                                {index}
-                            </div>
-                        ))}
-                    </div>
-
                 </div>
-                <motion.img src={ModelOne} alt="Pacot Photo Two" loading='lazy' id="modelOne"
-                    style={{opacity:"50%", filter:"blur(3px)"}}
-                    whileHover={{scale: 1.1, opacity: 1, filter: "blur(0px)", zIndex:"3"}}
-                    whileTap={{scale: 1.1, opacity: 1, filter: "blur(0px)", zIndex:"3"}}
-                />
-                <motion.img src={ModelTwo} alt="Pacot Photo One" loading='lazy' id="modelTwo"
-                    style={{opacity:"100%", filter:"blur(0.5px)", zIndex:"2"}}
-                    whileHover={{scale: 1.1, opacity: 1, filter: "blur(0px)", zIndex:"3"}}
-                    whileTap={{scale: 1.1, opacity: 1, filter: "blur(0px)", zIndex:"3"}}
-                />
+                <div className='profile-picture'>
+                    <motion.img src={ModelOne} alt="Pacot Photo Two" loading='lazy' id="modelOne"
+                        style={{opacity:"50%", filter:"blur(3px)"}}
+                        whileHover={{scale: 1.1, opacity: 1, filter: "blur(0px)", zIndex:"3"}}
+                        whileTap={{scale: 1.1, opacity: 1, filter: "blur(0px)", zIndex:"3"}}
+                    />
+                    <motion.img src={ModelTwo} alt="Pacot Photo One" loading='lazy' id="modelTwo"
+                        style={{opacity:"100%", filter:"blur(0.5px)", zIndex:"2"}}
+                        whileHover={{scale: 1.1, opacity: 1, filter: "blur(0px)", zIndex:"3"}}
+                        whileTap={{scale: 1.1, opacity: 1, filter: "blur(0px)", zIndex:"3"}}
+                    />
+                </div>
             </div>
     )
 }

@@ -447,6 +447,12 @@ $lightCaptionColor: #8C8F9F;
 }
 
 /* MOBILE */
+@media (max-width: 720px) {
+    .skills-section-grid {
+        gap: 10px;
+        padding: 5px 10px;
+    }
+}
 
 @media(max-width: 560px) {
     .experience {
