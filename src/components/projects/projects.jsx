@@ -99,14 +99,14 @@ function Projects () {
 
         {
             id: 'project-two',
-            title: 'Pacot Portfolio',
-            description: 'A personal portfolio developed to showcase my skills and projects as a front-end developer.',
+            title: 'Maison`D Staff Page',
+            description: 'A staff page dedicated for Maison`D admins and employees.',
             role: 'Full Stack Developer',
             status: 'Deployed / Live',
             indicator: <Deployed />,
-            link: 'https://pct-portfolio.vercel.app/',
+            link: 'https://admin-project-d.vercel.app/',
             target: '_blank',
-            tags: [React, HTML5, CSS3, Sass, JavaScript, Figma, Motion]
+            tags: [React, HTML5, CSS3, JavaScript, Figma, Firebase]
         },
 
         {
