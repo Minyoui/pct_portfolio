@@ -1,5 +1,6 @@
 import './contact.scss';
 import { useState, useEffect, useRef } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 
 //DarkMode
 import { useDarkMode } from '../../context/DarkModeContext';
@@ -12,9 +13,13 @@ import Location from '../../assets/Address.svg';
 
 function Contact () {
     const [isVisible, setIsVisible] = useState(false);
+    const [state, handleSubmit] = useForm("mgvnraed");
     const { darkMode } = useDarkMode();
     const ref = useRef(null);
 
+    if (state.succeeded) {
+      return <p>Thanks for joining!</p>;
+    }
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -48,17 +53,28 @@ function Contact () {
                     <p><img src={Location} alt='location' loading="lazy"/>City of Imus, Cavite Philippines</p>
                 </div>
             </div>
-            <form className={`contact-form ${isVisible? 'animate':''}`} ref={ref}>
+
+            <form 
+                className={`contact-form ${isVisible? 'animate':''}`} 
+                ref={ref} 
+                onSubmit={handleSubmit}
+                action="https://formspree.io/f/mgvnraed"
+                method="POST"
+            >
                 <div className='form-name'>
-                    <input type="text" placeholder=" " id="name" required/>
+                    <input type="text" placeholder=" " id="name" name="name" required/>
                     <label for="name">Name</label>
+                    <ValidationError prefix='Name' field="name" errors={state.errors}/>
                 </div>
                 <div className='form-email'>
-                    <input type="email" placeholder=" " id="email" required/>
+                    <input type="email" placeholder=" " id="email" name="email" required/>
                     <label for="email">Email</label>
+                    <ValidationError prefix='Email' field="email" errors={state.errors}/>
                 </div>
-                <textarea className="form-message" placeholder="Your Message Here ..." required/>
-                <button type="submit"><img src={Send} alt="send-icon" loading='lazy'/>Submit</button>
+                <textarea className="form-message" placeholder="Your Message Here ..." id="message" name="message" required/>
+                <ValidationError prefix="Message" field="message" errors={state.errors}/>
+
+                <button type="submit" disabled={state.submitting}><img src={Send} alt="send-icon" loading='lazy'/>Submit</button>
             </form>
         </div>
     )
