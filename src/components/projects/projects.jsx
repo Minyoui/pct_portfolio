@@ -114,15 +114,15 @@ function Projects () {
 
         {
             id: 'project-three',
-            title: 'QueueIt',
-            description: 'A smart queue management web application designed to streamline waiting lines and enhance customer experience.',
-            role: 'UI/UX & Front-End Developer',
+            title: 'My Portfolio',
+            description: '(Always being updated) A personally developed portfolio to showcase my skills in front-end development.',
+            role: 'Front-End Developer',
             status: 'Deployed / Live',
             indicator: <Deployed />,
-            link: 'https://queueit-d6c2e.web.app/',
-            github: '#project-three',
+            link: '#home',
+            github: 'https://github.com/Minyoui/pct_portfolio',
             target: '_blank',
-            tags: [Figma, HTML5, CSS3]
+            tags: [React, Vite, HTML5, CSS3, Sass, Motion, Figma]
         },
 
         {
