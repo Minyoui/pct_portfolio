@@ -1,12 +1,14 @@
 $darkModeBackground: #2B2B2B;
 $darkModeCaptionColor: #9E9E9E;
 $darkDefaultColor: white;
+$darkContainerColor: #444444;
 
 
 $lightModeBackground: #F4F5F9;
 $lightModeHeaderColor: #34363F;
 $lightDefaultColor: #565863;
-$lightContainerColor: #E7E8EF;
+$lightContainerColor: #d9d9dd;
+$lightImportantColor: #4361EE;
 
 %darkMode {
     background: $darkModeBackground;
@@ -17,7 +19,6 @@ $lightContainerColor: #E7E8EF;
 %lightMode {
     background: $lightModeBackground;
     color: $lightDefaultColor;
-    transition: all 0.3s ease;
 }
 
 .projects-section {
@@ -26,9 +27,10 @@ $lightContainerColor: #E7E8EF;
 
     display: flex;
     flex-direction: column;
-    align-items: start;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
     padding: 10px 20px;
+    gap: 20px;
 
 }
 
@@ -41,192 +43,159 @@ $lightContainerColor: #E7E8EF;
     font-size: 1rem;
     opacity: 0;
 
-    transition: opacity 1s ease;
-}
-
-.projects-section.light .projects-header {
-    @extend %lightMode;
+    transition: opacity 1s ease, width 1s ease, background-color 0.3s ease;
 }
 
 .project-box {
-    position: relative;
+    @extend %darkMode;
+    height: 350px;
+    width: 100%;
+    border-radius: 10px;
+    opacity: 0;
+
     display: flex;
     flex-direction: row;
-    background-color: $darkModeBackground;
-    border-radius: 10px;
-    width: 100%;
-    opacity: 0;
-    transition: transform 0.3s ease, 
-                box-shadow 0.3s ease,
-                background-color 0.3s ease,
-                opacity 0.5s ease;
-
-}
-
-.projects-section.light .project-box {
-    background-color: $lightModeBackground;
-}
-
-.link {
-    position: absolute;
-    right: 15px;
-    width: 25px;
-    height: 25px;
-
-    display: none;
-    transition: filter 0.3s ease;
+    overflow:hidden;
 }
 
 .project-box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
 }
 
-.project-box:hover .project-one,
-.project-box:hover .project-two,
-.project-box:hover .project-three {
-    filter: grayscale(0);
-}
-
-
-.project-one {
-    background-image: url("../../assets/Maison-D-thumbnail.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: grayscale(1);
-
-    transition: filter 0.3s ease;
-}
-
-.project-two {
-    background-image: url("../../assets/maison-d-staff-page-thumbnail.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: grayscale(1);
-
-    transition: filter 0.3s ease;
-}
-
-.project-three {
-    background-image: url("../../assets/QueueIt-Thumbnail.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: grayscale(1);
-
-    transition: filter 0.3s ease;
-}
-
-.project-container {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    width: 100%;
-}
-
-.project-info h1 {
-    color: $darkDefaultColor;
-    transition: color 0.3s ease;
-}
-
-.project-info p {
-    color: $darkModeCaptionColor;
-    transition: color 0.3s ease;
-}
-
-.projects-section.light .project-info h1 {
-    color: $lightModeHeaderColor;
-}
-
-
-.projects-section.light .project-info p {
-    color: $lightDefaultColor;
-}
-
-
-.project-info {
-    display: block;
+.project-description {
     padding: 20px;
-}
-
-.additional-info {
-    background-color: #444444;
-    border-radius: 10px;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-
+    width: 35%;
     display: flex;
     flex-direction: column;
-    transition: background-color 0.3s ease;
+    gap: 10px;
 }
 
-.projects-section.light .additional-info {
-    background-color: $lightContainerColor;
+.project-description h1 {
+    border-bottom: 1px solid $darkDefaultColor;
+    margin-bottom: 5px;
 }
 
-.role-status {
+.project-description p {
+    color: $darkModeCaptionColor;
+    font-size: 0.8rem;
+}
+
+.project-description a {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-.role-status p,
-.role-status a {
-    color: #7c7c7c;
-    width: 100%;
-    height: 50px;
-    text-align: center;
-    padding: 10px;
-
-    display: flex;
-    align-items: center;
     justify-content: center;
+    background-color: $darkContainerColor;
+    border-radius: 10px;
+    padding: 15px 10px;
     gap: 5px;
-
+    text-decoration: none;
+    color: $darkDefaultColor;
     transition: all 0.3s ease;
 }
 
-.role-status a {
-    position: relative;
+.project-description a:hover {
+    background-color: $darkModeCaptionColor;
 }
 
-.role-status p:hover,
-.role-status a:hover {
-    box-shadow: inset 0 1px 5px rgba(0,0,0,0.8);
-    background-color: #777777;
-    color: white;
+.tools img,
+.project-description img {
+    width: 25px;
 }
 
-.role-status a:hover .link{
-    display: block;
+#github-link {
+    background-color: transparent !important;
+    border: solid 1px $darkDefaultColor;
+    transition: all 0.3s ease;
 }
 
-.projects-section.light {
-    .role-status p:hover,
-    .role-status a:hover {
-        background-color: #4361EE;
+#github-link:hover {
+    background-color: $darkModeCaptionColor !important;
+    border: none;
+}
+
+.tools {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
+
+/* THUMBNAILS */
+
+.project-one,
+.project-two,
+.project-three,
+.project-four {
+    filter: grayscale(1);
+    width: 65%;
+    transition: all 0.3s ease;
+}
+
+.project-box:hover {
+    .project-one,
+    .project-two,
+    .project-three,
+    .project-four {
+        filter:grayscale(0);
     }
 }
 
-.role-text {
-    border-right: solid 1px rgba(255,255,255,0.3);
+.project-one {
+    background: url("../../assets/Maison-D-thumbnail.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-.project-tags {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    overflow-x: auto;
-    white-space: nowrap;
-
-    height: 100%;
-    padding: 0 40px;
-    gap: 2rem;
+.project-two {
+    background: url("../../assets/maison-d-staff-page-thumbnail.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
+
+.project-three {
+    background: url("../../assets/QueueIt-Thumbnail.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.project-four {
+    background: url("../../assets/under-maintenance.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* LIGHT MODE */
+
+.projects-section.light {
+    .projects-header,
+    .project-box {
+        @extend %lightMode;
+    }
+
+    .project-description a {
+        background-color: $darkModeCaptionColor;
+    }
+
+    .project-description h1 {
+        border-bottom: solid 1px $lightDefaultColor;
+    }
+
+    #github-link:hover,
+    .project-description a:hover {
+        background-color: $lightImportantColor !important;
+    }
+
+    #github-link {
+        background-color: $lightContainerColor !important;
+    }
+}
+
 
 
 /* SCROLL ANIMATIONS */
@@ -239,6 +208,7 @@ $lightContainerColor: #E7E8EF;
 
 .project-box.animate {
     opacity: 1;
+    animation: slideInRight 1s ease;
 }
 
 @keyframes slideInLeft {
@@ -278,55 +248,21 @@ $lightContainerColor: #E7E8EF;
         gap: 10px;
         padding: 5px 10px;
     }
-    
+
     .project-box {
+        height: fit-content;
         flex-direction: column;
-        gap: 0px;
     }
-
-    .link {
-        display: inline;
-    }
-
     .project-one,
     .project-two,
-    .project-three {
+    .project-three,
+    .project-four {
         filter: grayscale(0);
+        width: 100%;
+        height: 200px;
+        transition: all 0.3s ease;
     }
-
-    .link {
-        top: 325px;
-    }
-
-    .project-tags {
-        padding: 20px;
-        justify-content: flex-start;
-    }
-
-    .project-tags::-webkit-scrollbar {
-        width: 10px;
-    }
-
-    .project-tags::-webkit-scrollbar-thumb {
-        background-color: #777777;
-        border-radius: 10px;
-    }
-
-    .role-status {
-        justify-content: center;
-    }
-
-    .role-status p {
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 500px) {
-    .role-status {
-        flex-direction: column;
-    }
-    .role-text {
-        border-right: none;
-        border-bottom: solid 1px rgba(255,255,255,0.3);
+    .project-description {
+        width: 100%;
     }
 }

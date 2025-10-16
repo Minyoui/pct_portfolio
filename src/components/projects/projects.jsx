@@ -16,6 +16,7 @@ import ExternalLink from '../../assets/External Link.png';
 import Arduino from '../../assets/misc/Arduino.svg';
 import Sass from '../../assets/misc/Sass.svg';
 import Tailwind from '../../assets/misc/Tailwind CSS.svg';
+import Github from '../../assets/misc/GitHub.svg';
 
 function Deployed({
 
@@ -93,6 +94,7 @@ function Projects () {
             status: 'Deployed / Live',
             indicator: <Deployed />,
             link: 'https://project-maison.vercel.app/',
+            github: 'https://github.com/Minyoui/PROJECT_MAISON',
             target: '_blank',
             tags: [React, HTML5, CSS3, JavaScript, Firebase, Figma],
         },
@@ -105,6 +107,7 @@ function Projects () {
             status: 'Deployed / Live',
             indicator: <Deployed />,
             link: 'https://admin-project-d.vercel.app/',
+            github: 'https://github.com/Minyoui/Admin-Project-D',
             target: '_blank',
             tags: [React, HTML5, CSS3, JavaScript, Figma, Firebase]
         },
@@ -117,6 +120,7 @@ function Projects () {
             status: 'Deployed / Live',
             indicator: <Deployed />,
             link: 'https://queueit-d6c2e.web.app/',
+            github: '#project-three',
             target: '_blank',
             tags: [Figma, HTML5, CSS3]
         },
@@ -129,6 +133,7 @@ function Projects () {
             status:'Work In Progress',
             indicator: <WIP />,
             link: '#project-four',
+            github: '#project-four',
             target:'',
             tags: [React, HTML5, CSS3, Tailwind, JavaScript, Figma],
         }
@@ -138,39 +143,31 @@ function Projects () {
             <div className={`projects-section ${darkMode? 'light':'dark'}`} id="projects" ref={ref} >
                 <p className={`projects-header ${isVisible? 'animate' : ''}`} >Projects</p>
                 {projectsData.map((project) => (
-                    <div 
-                        href={project.link} 
-                        target={project.target} 
-                        className={`project-box ${isVisible? 'animate':''}`} 
-                        id={project.id} 
-                        key={project.id}
-                        ref={ref}
-                    >
-                        <div className={project.id}
-                            style={{
-                                height:"300px",
-                                width:"100%",
-                                borderTopLeftRadius: "10px",
-                                borderBottomLeftRadius: "10px",
-                            }}/>
-                        <div className='project-container'>
-                            <div className='project-info'>
-                                <h1>{project.title}</h1>
-                                <p style={{ textAlign:"left"}}>{project.description}</p>
-                            </div>
-                            <div className='additional-info'>
-                                <div className='role-status'>
-                                    <p className='role-text'><strong>Role:</strong> {project.role}</p>
-                                    <a href={project.link} target={project.target}>
-                                        <strong>Status:</strong> {project.status} {project.indicator}
-                                        <img src={ExternalLink} className='link' alt="external link" loading="lazy"/>
-                                    </a>
-                                </div>
-                                <div className='project-tags'>
-                                    {project.tags.map((index) => (
-                                        <img src={index} style={{width:"50px"}} alt="Tool Icon" loading="lazy"/>
-                                    ))}
-                                </div>
+                    <div className={`project-box ${isVisible? 'animate' : ''}`} id={project.id} key={project.id} ref={ref}>
+                        <div className={project.id}></div>
+                        <div className='project-description'>
+                            <h1>{project.title}</h1>
+                            <p>{project.description}</p>
+                            <a 
+                                href={project.link}
+                                target={project.target}
+                            >
+                                {project.indicator}
+                                Visit Here
+                                <img src={ExternalLink} />
+                            </a>
+                            <a
+                                href={project.github}
+                                target={project.target}
+                                id="github-link"
+                            >
+                                Github Link
+                                <img src={Github} />
+                            </a>
+                            <div className='tools'>
+                                {project.tags.map((index) => (
+                                    <img src={index} alt="Tool Icon" loading='lazy'/>
+                                ))}
                             </div>
                         </div>
                     </div>
