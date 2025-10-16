@@ -28,6 +28,7 @@ import Motion from '../../assets/misc/motion.png';
 import Arduino from '../../assets/misc/Arduino.svg';
 import Sass from '../../assets/misc/Sass.svg';
 import Tailwind from '../../assets/misc/Tailwind CSS.svg';
+import Vite from '../../assets/misc/Vite.svg';
 
 function BranchLine({ height = "50px" }) {
     return (
@@ -105,6 +106,7 @@ function Skills () {
 
     const techTools = [
         { src: React, label: 'React'},
+        { src: Vite, label: 'Vite'},
         { src: JavaScript, label: 'JavaScript'},
         { src: HTML5, label: 'HTML5'},
         { src: CSS3, label: 'CSS3'},

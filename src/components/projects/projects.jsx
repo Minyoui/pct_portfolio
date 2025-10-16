@@ -13,10 +13,10 @@ import Figma from '../../assets/misc/Figma.svg';
 import Firebase from '../../assets/misc/Firebase.svg';
 import Motion from '../../assets/misc/motion.png';
 import ExternalLink from '../../assets/External Link.png';
-import Arduino from '../../assets/misc/Arduino.svg';
 import Sass from '../../assets/misc/Sass.svg';
 import Tailwind from '../../assets/misc/Tailwind CSS.svg';
 import Github from '../../assets/misc/GitHub.svg';
+import Vite from '../../assets/misc/Vite.svg';
 
 function Deployed({
 
@@ -96,7 +96,7 @@ function Projects () {
             link: 'https://project-maison.vercel.app/',
             github: 'https://github.com/Minyoui/PROJECT_MAISON',
             target: '_blank',
-            tags: [React, HTML5, CSS3, JavaScript, Firebase, Figma],
+            tags: [React, Vite, HTML5, CSS3, JavaScript, Firebase, Figma],
         },
 
         {
@@ -109,7 +109,7 @@ function Projects () {
             link: 'https://admin-project-d.vercel.app/',
             github: 'https://github.com/Minyoui/Admin-Project-D',
             target: '_blank',
-            tags: [React, HTML5, CSS3, JavaScript, Figma, Firebase]
+            tags: [React, Vite, HTML5, CSS3, JavaScript, Figma, Firebase]
         },
 
         {
@@ -135,7 +135,7 @@ function Projects () {
             link: '#project-four',
             github: '#project-four',
             target:'',
-            tags: [React, HTML5, CSS3, Tailwind, JavaScript, Figma],
+            tags: [React, Vite, HTML5, CSS3, Tailwind, JavaScript, Figma],
         }
     ];
 
