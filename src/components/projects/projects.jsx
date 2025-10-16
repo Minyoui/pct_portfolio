@@ -88,7 +88,7 @@ function Projects () {
         {
             id: 'project-one',
             title: 'Maison`D',
-            description: 'A modern website developed to provide an online booking system for a local spa business. ',
+            description: '(Currently being updated) A modern website developed to provide an online booking system for a local spa business. ',
             role: 'Full Stack Developer',
             status: 'Deployed / Live',
             indicator: <Deployed />,
@@ -100,7 +100,7 @@ function Projects () {
         {
             id: 'project-two',
             title: 'Maison`D Staff Page',
-            description: 'A staff page dedicated for Maison`D admins and employees.',
+            description: '(Currently being updated) A staff page dedicated for Maison`D admins and employees.',
             role: 'Full Stack Developer',
             status: 'Deployed / Live',
             indicator: <Deployed />,
@@ -138,7 +138,7 @@ function Projects () {
             <div className={`projects-section ${darkMode? 'light':'dark'}`} id="projects" ref={ref} >
                 <p className={`projects-header ${isVisible? 'animate' : ''}`} >Projects</p>
                 {projectsData.map((project) => (
-                    <a 
+                    <div 
                         href={project.link} 
                         target={project.target} 
                         className={`project-box ${isVisible? 'animate':''}`} 
@@ -146,12 +146,12 @@ function Projects () {
                         key={project.id}
                         ref={ref}
                     >
-                        <img src={ExternalLink} className='link' alt="external link" loading="lazy"/>
                         <div className={project.id}
                             style={{
                                 height:"300px",
                                 width:"100%",
-                                borderRadius:"10px"
+                                borderTopLeftRadius: "10px",
+                                borderBottomLeftRadius: "10px",
                             }}/>
                         <div className='project-container'>
                             <div className='project-info'>
@@ -161,7 +161,10 @@ function Projects () {
                             <div className='additional-info'>
                                 <div className='role-status'>
                                     <p className='role-text'><strong>Role:</strong> {project.role}</p>
-                                    <p><strong>Status:</strong> {project.status} {project.indicator}</p>
+                                    <a href={project.link} target={project.target}>
+                                        <strong>Status:</strong> {project.status} {project.indicator}
+                                        <img src={ExternalLink} className='link' alt="external link" loading="lazy"/>
+                                    </a>
                                 </div>
                                 <div className='project-tags'>
                                     {project.tags.map((index) => (
@@ -170,7 +173,7 @@ function Projects () {
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 ))}
             </div>
     )

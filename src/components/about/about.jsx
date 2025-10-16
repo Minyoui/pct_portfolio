@@ -28,7 +28,7 @@ function About () {
                     <p style={{
 
                         color:"#9c9c9cff"
-                    }}>With my skills, I have cultivated a strong work ethic and an eagerness to learn and adapt to new challenges. My goal is to contribute meaningfully to projects that blend innovation, aesthetic and functionality. I thrive in environments where I can collaborate with others and continue to grow as a professional.</p>
+                    }}>Hello! My name is <strong>Evane Dela Cruz Pacot</strong> and I always have a keen eye when it comes to creativity. I am always open on learning more to improve my skills and be a professional individual! With my built skills, I have cultivated a strong work ethic and an eagerness to learn and adapt to new challenges. My goal is to contribute meaningfully to projects that blend innovation, aesthetic and functionality. I thrive in environments where I can collaborate with others and continue to grow as a professional.</p>
                 </div>
                 <div className='profile-picture'>
                     <motion.img src={ModelOne} alt="Pacot Photo Two" loading='lazy' id="modelOne"

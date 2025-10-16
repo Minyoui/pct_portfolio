@@ -117,7 +117,8 @@ $lightCaptionColor: #8C8F9F;
 }
 
 .tech-tools img {
-    filter: invert(0) !important;
+    filter: invert(0)!important;
+    filter: drop-shadow(0 5px 2px rgba(0,0,0,0.3)) !important;
     width: 50px;
 }
 
