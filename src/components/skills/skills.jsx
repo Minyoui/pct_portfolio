@@ -157,7 +157,6 @@ function Skills () {
             'Teamwork,',
             'Leadership,',
             'Conflict Resolution,',
-            'Problem-Solving,',
             'Adaptability,',
             'Emotional Intelligence'
         ]
