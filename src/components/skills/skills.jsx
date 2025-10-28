@@ -29,6 +29,9 @@ import Arduino from '../../assets/misc/Arduino.svg';
 import Sass from '../../assets/misc/Sass.svg';
 import Tailwind from '../../assets/misc/Tailwind CSS.svg';
 import Vite from '../../assets/misc/Vite.svg';
+import MongoDB from '../../assets/misc/MongoDB.png';
+import NodeJS from '../../assets/misc/Nodejs.png';
+import Git from '../../assets/misc/Git.png';
 
 function BranchLine({ height = "50px" }) {
     return (
@@ -119,6 +122,9 @@ function Skills () {
         { src: Firebase, label: 'Firebase'},
         { src: Canva, label: 'Canva'},
         { src: Arduino, label: 'Arduino'},
+        { src: MongoDB, label: 'MongoDB'},
+        { src: NodeJS, label: 'Node.js'},
+        { src: Git, label: 'Git Version Control'}
     ];
 
     {/* FOR MODAL */}

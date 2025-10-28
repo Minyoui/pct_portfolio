@@ -17,6 +17,8 @@ import Sass from '../../assets/misc/Sass.svg';
 import Tailwind from '../../assets/misc/Tailwind CSS.svg';
 import Github from '../../assets/misc/GitHub.svg';
 import Vite from '../../assets/misc/Vite.svg';
+import MongoDB from '../../assets/misc/MongoDB.png';
+import NodeJS from '../../assets/misc/Nodejs.png';
 
 function Deployed({
 
@@ -89,20 +91,20 @@ function Projects () {
         {
             id: 'project-one',
             title: 'Maison`D',
-            description: '(Currently being updated) A modern website developed to provide an online booking system for a local spa business. ',
+            description: '(Currently being developed) A modern website developed to provide an online booking system for a local spa business. NOTE: Back-end is not yet deployed',
             role: 'Full Stack Developer',
             status: 'Deployed / Live',
             indicator: <Deployed />,
-            link: 'https://project-maison.vercel.app/',
-            github: 'https://github.com/Minyoui/PROJECT_MAISON',
+            link: 'https://maison-beige.vercel.app/',
+            github: 'https://github.com/Minyoui/maison-website',
             target: '_blank',
-            tags: [React, Vite, HTML5, CSS3, JavaScript, Firebase, Figma],
+            tags: [React, Vite, HTML5, CSS3, JavaScript, MongoDB, NodeJS, Figma],
         },
 
         {
             id: 'project-two',
             title: 'Maison`D Staff Page',
-            description: '(Currently being updated) A staff page dedicated for Maison`D admins and employees.',
+            description: '(Currently being developed) A staff page dedicated for Maison`D admins and employees.',
             role: 'Full Stack Developer',
             status: 'Deployed / Live',
             indicator: <Deployed />,

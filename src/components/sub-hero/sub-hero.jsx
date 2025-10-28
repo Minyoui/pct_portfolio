@@ -13,11 +13,11 @@ function SubHero () {
                     <span>Years of Experience</span>
                 </div>
                 <div className='container'>
-                    <p>3</p>
-                    <span>Projects Completed</span>
+                    <p>4</p>
+                    <span>Projects Developed</span>
                 </div>
                 <div className='container'>
-                    <p>13</p>
+                    <p>17</p>
                     <span>Technology Stack</span>
                 </div>
             </div>
