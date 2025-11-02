@@ -95,23 +95,10 @@ function Projects () {
             role: 'Full Stack Developer',
             status: 'Deployed / Live',
             indicator: <Deployed />,
-            link: 'https://maison-beige.vercel.app/',
+            link: 'https://project-maison.vercel.app/',
             github: 'https://github.com/Minyoui/maison-website',
             target: '_blank',
-            tags: [React, Vite, HTML5, CSS3, JavaScript, MongoDB, NodeJS, Figma],
-        },
-
-        {
-            id: 'project-two',
-            title: 'Maison`D Staff Page',
-            description: '(Currently being developed) A staff page dedicated for Maison`D admins and employees.',
-            role: 'Full Stack Developer',
-            status: 'Deployed / Live',
-            indicator: <Deployed />,
-            link: 'https://admin-project-d.vercel.app/',
-            github: 'https://github.com/Minyoui/Admin-Project-D',
-            target: '_blank',
-            tags: [React, Vite, HTML5, CSS3, JavaScript, Figma, Firebase]
+            tags: [React, Vite, HTML5, CSS3, JavaScript, Firebase, Figma],
         },
 
         {
