@@ -97,7 +97,7 @@ function Projects () {
             status: 'Deployed / Live',
             indicator: <Deployed />,
             link: 'https://project-maison.vercel.app/',
-            github: 'https://github.com/Minyoui/maison-website',
+            github: 'https://github.com/Minyoui/PROJECT_MAISON',
             target: '_blank',
             tags: [React, Vite, HTML5, CSS3, Sass, JavaScript, Firebase, Figma],
         },
@@ -111,7 +111,7 @@ function Projects () {
             indicator: <Deployed />,
             link: 'https://maison-spa-project.vercel.app',
             github: 'https://github.com/Minyoui/maison-spa',
-            target:'',
+            target:'_blank',
             tags: [Next, HTML5, CSS3, Sass, Tailwind, JavaScript, MongoDB, NodeJS, Motion, Figma],
         },
 
