@@ -16,6 +16,7 @@ import Download from '../../assets/Download.svg';
 
 //misc
 import React from '../../assets/misc/React.svg';
+import Next from '../../assets/misc/next-js.svg';
 import VisualStudio from '../../assets/misc/Visual Studio.svg';
 import JavaScript from '../../assets/misc/JavaScript.svg';
 import HTML5 from '../../assets/misc/Html 5.svg';
@@ -32,6 +33,9 @@ import Vite from '../../assets/misc/Vite.svg';
 import MongoDB from '../../assets/misc/MongoDB.png';
 import NodeJS from '../../assets/misc/Nodejs.png';
 import Git from '../../assets/misc/Git.png';
+import GPT from '../../assets/misc/ChatGPT.png';
+import Claude from '../../assets/misc/Claude Ai.png';
+import Gemini from '../../assets/misc/Gemini Ai.png';
 
 function BranchLine({ height = "50px" }) {
     return (
@@ -108,49 +112,53 @@ function Skills () {
     ];
 
     const techTools = [
-        { src: React, label: 'React'},
+        { src: React, label: 'React.js'},
+        { src: Next, label: 'Next.js'},
         { src: Vite, label: 'Vite'},
+        { src: VisualStudio, label: 'Visual Studio Code'},
         { src: JavaScript, label: 'JavaScript'},
         { src: HTML5, label: 'HTML5'},
         { src: CSS3, label: 'CSS3'},
         { src: Sass, label: 'Sass'},
         { src: Tailwind, label: 'Tailwind'},
+        { src: Git, label: 'Git Version Control'},
+        { src: GitHub, label: 'Github'},
+        { src: GPT, label: 'ChatGPT'},
+        { src: Claude, label: 'Claude AI'},
+        { src: Gemini, label: 'Gemini AI'},
         { src: Motion, label: 'Motion'},
         { src: Figma, label: 'Figma'},
-        { src: VisualStudio, label: 'Visual Studio Code'},
-        { src: GitHub, label: 'Github'},
-        { src: Firebase, label: 'Firebase'},
         { src: Canva, label: 'Canva'},
+        { src: Firebase, label: 'Firebase'},
         { src: Arduino, label: 'Arduino'},
         { src: MongoDB, label: 'MongoDB'},
         { src: NodeJS, label: 'Node.js'},
-        { src: Git, label: 'Git Version Control'}
     ];
 
     {/* FOR MODAL */}
 
     const education = [
         {
-            degree: "Bachelor of Science in Computer Engineering with Specialization in Software Development",
-            school: "De La Salle University of Dasmariñas Cavite",
+            title: "Freelancer (Front-End Developer)",
+            description: "Worked as a freelance front-end developer; developed modern websites using Next.js framework to achieve SEO and performance optimization.",
+            year: "2025"
+        },
+        {
+            title: "Full Stack Developer (Intern), Blissful Bali Spa",
+            description: "Led the design of a website for a local spa business using Figma. Designed original business assets used in development. Developed two versions using React.js & Next.js for client approval.",
+            year: "Feb-April 2025"
+        },
+        {
+            title: "Bachelor of Science in Computer Engineering with Specialization in Software Development",
+            description: "De La Salle University of Dasmariñas Cavite",
             year: "2021-2025"
-        },
-        {
-            degree: "STEM (Senior High School)",
-            school: "Cachapero Academe Inc.",
-            year: "2019-2021"
-        },
-        {
-            degree: "Junior High School",
-            school: "Imus Institute of Science & Technology Inc.",
-            year: "2015-2019"
         },
     ];
 
     const skills = {
         hard: [
             'Computer Programming,',
-            'Front-End Development (React.js, HTML5, CSS3, JavaScript),',
+            'Front-End Development (React.js, Next.js, HTML5, CSS3, Tailwind, JavaScript, Motion, Git),',
             'Web Design (Figma),',
             'Computer Hardware Assembly,',
             'PCB Design,',
@@ -305,11 +313,11 @@ function Skills () {
                             <div className='modal-body'>
                                 <h1>SUMMARY</h1>
                                 <p>I am a graduate student from De La Salle University Dasmariñas, driven by a passion for technology and creativity. I specialize in front-end programming, with a strong passion for creating user-friendly and visually engaging web interfaces. Beyond coding, I bring a creative eye for UI design, allowing me to craft websites that are not only functional but also aesthetically appealing. I place great importance on user experience, ensuring that every website I design or develop is intuitive, responsive, and built with both form and function in mind.</p>
-                                <h1>EDUCATION</h1>
+                                <h1>EXPERIENCE</h1>
                                 {education.map((level, index) => (
                                     <div key={index} className='education-section'>
-                                        <h3 style={{paddingRight:"100px"}}>{level.degree}</h3>
-                                        <p>{level.school}</p>
+                                        <h3 style={{paddingRight:"100px"}}>{level.title}</h3>
+                                        <p>{level.description}</p>
                                         <span>{level.year}</span>
                                     </div>
                                 ))}

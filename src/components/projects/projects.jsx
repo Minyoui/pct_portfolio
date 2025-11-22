@@ -19,6 +19,7 @@ import Github from '../../assets/misc/GitHub.svg';
 import Vite from '../../assets/misc/Vite.svg';
 import MongoDB from '../../assets/misc/MongoDB.png';
 import NodeJS from '../../assets/misc/Nodejs.png';
+import Next from '../../assets/misc/next-js.svg';
 
 function Deployed({
 
@@ -90,15 +91,28 @@ function Projects () {
     const projectsData = [
         {
             id: 'project-one',
-            title: 'Maison`D',
-            description: '(Currently being developed) A modern website developed to provide an online booking system for a local spa business. NOTE: Back-end is not yet deployed',
+            title: 'Maison`D (React.js)',
+            description: '(Demo) A modern website developed to provide an online booking system for a local spa business. React.js was used for the front-end and Firebase for the back-end.',
             role: 'Full Stack Developer',
             status: 'Deployed / Live',
             indicator: <Deployed />,
             link: 'https://project-maison.vercel.app/',
             github: 'https://github.com/Minyoui/maison-website',
             target: '_blank',
-            tags: [React, Vite, HTML5, CSS3, JavaScript, Firebase, Figma],
+            tags: [React, Vite, HTML5, CSS3, Sass, JavaScript, Firebase, Figma],
+        },
+
+        {
+            id: 'project-two',
+            title: 'Maison`D (Next.js)',
+            description: 'The latest version (currently being developed) of the Maison`D website. It follows the MENN stack (MongoDB, Express, Next, Node). Aims to provide a much more scalable, SEO focused and, performance optimized website for the local spa business.',
+            role:'Front-End Developer',
+            status:'Work In Progress',
+            indicator: <Deployed />,
+            link: 'https://maison-spa-project.vercel.app',
+            github: 'https://github.com/Minyoui/maison-spa',
+            target:'',
+            tags: [Next, HTML5, CSS3, Sass, Tailwind, JavaScript, MongoDB, NodeJS, Motion, Figma],
         },
 
         {
@@ -114,18 +128,6 @@ function Projects () {
             tags: [React, Vite, HTML5, CSS3, Sass, Motion, Figma]
         },
 
-        {
-            id: 'project-four',
-            title: 'Jumies',
-            description: 'Pastry Business Website, Work In Progress',
-            role:'Front-End Developer',
-            status:'Work In Progress',
-            indicator: <WIP />,
-            link: '#project-four',
-            github: '#project-four',
-            target:'',
-            tags: [React, Vite, HTML5, CSS3, Tailwind, JavaScript, Figma],
-        }
     ];
 
     return (
