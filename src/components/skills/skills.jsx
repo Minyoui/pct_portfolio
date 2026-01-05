@@ -139,18 +139,31 @@ function Skills () {
 
     const education = [
         {
-            title: "Freelancer (Front-End Developer)",
-            description: "Worked as a freelance front-end developer; developed modern websites using Next.js framework to achieve SEO and performance optimization.",
-            year: "2025"
+            title: "Front-End Developer (Freelance)",
+            description: [
+                "Developed modern, responsive websites using Next.js, focusing on SEO optimization and performance.",
+                "Translated client requirements into clean, user-friendly interfaces.",
+                "Implemented reusable components and responsive layouts for cross-device compatibility.",
+                "Maintained clear communication with clients to ensure alignment with project goals and timelines.",
+            ],
+            year: "2025-Present"
         },
         {
             title: "Full Stack Developer (Intern), Blissful Bali Spa",
-            description: "Led the design of a website for a local spa business using Figma. Designed original business assets used in development. Developed two versions using React.js & Next.js for client approval.",
-            year: "Feb-April 2025"
+            description: [
+                "Led the end-to-end design and development of a business website.",
+                "Created wireframes and high-fidelity designs using Figma.",
+                "Designed the official business logo and visual assets.",
+                "Developed two website versions using React.js and Next.js for client review and approval.",
+                "Collaborated closely with the business owner, providing regular progress updates.",
+            ],
+            year: "Feb 2025 - Apr 2025"
         },
         {
             title: "Bachelor of Science in Computer Engineering with Specialization in Software Development",
-            description: "De La Salle University of Dasmariñas Cavite",
+            description: [
+                "De La Salle University of Dasmariñas Cavite"
+            ],
             year: "2021-2025"
         },
     ];
@@ -163,7 +176,8 @@ function Skills () {
             'Computer Hardware Assembly,',
             'PCB Design,',
             'Soldering,',
-            'Professional Portrait Drawing'
+            'Professional Portrait Drawing',
+            'Video Editing (Short & Long-form Content, Basic Motion Graphics, Visual Storytelling, Adobe Premiere Pro, CapCut'
         ],
         soft: [
             'Creativity,',
@@ -171,8 +185,7 @@ function Skills () {
             'Teamwork,',
             'Leadership,',
             'Conflict Resolution,',
-            'Adaptability,',
-            'Emotional Intelligence'
+            'Adaptability,'
         ]
     };
 
@@ -312,17 +325,31 @@ function Skills () {
 
                             <div className='modal-body'>
                                 <h1>SUMMARY</h1>
-                                <p>I am a graduate student from De La Salle University Dasmariñas, driven by a passion for technology and creativity. I specialize in front-end programming, with a strong passion for creating user-friendly and visually engaging web interfaces. Beyond coding, I bring a creative eye for UI design, allowing me to craft websites that are not only functional but also aesthetically appealing. I place great importance on user experience, ensuring that every website I design or develop is intuitive, responsive, and built with both form and function in mind.</p>
+                                <p>
+                                    Front-End Developer with hands-on experience in building modern, responsive, and 
+                                    performance-optimized web applications using React.js and Next.js. Strong eye for 
+                                    UI/UX design, combining technical development skills with creative design thinking 
+                                    to deliver intuitive and visually engaging user interfaces. Experienced in working 
+                                    directly with clients as a freelancer, translating business requirements into 
+                                    functional digital solutions.
+                                </p>
                                 <h1>EXPERIENCE</h1>
                                 {education.map((level, index) => (
                                     <div key={index} className='education-section'>
                                         <h3 style={{paddingRight:"100px"}}>{level.title}</h3>
-                                        <p>{level.description}</p>
+                                        {/* <p>{level.description}</p> */}
+                                        <ul className='experience-description'>
+                                            {level.description.map((info, index) => (
+                                                <li key={index}>
+                                                    {info}
+                                                </li>
+                                            ))}
+                                        </ul>
                                         <span>{level.year}</span>
                                     </div>
                                 ))}
                                 <h1>SKILLS</h1>
-                                <h3 className='modal-skills-section'>Hard Skills:
+                                <h3 className='modal-skills-section'>Technical Skills:
                                     {skills.hard.map((info) => (
                                         <span> {info} </span>
                                     ))}

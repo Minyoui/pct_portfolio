@@ -373,6 +373,15 @@ $lightCaptionColor: #8C8F9F;
     align-items: start;
 }
 
+.experience-description {
+    li {
+        color: rgba(255,255,255,0.5);
+    }
+    li::before {
+        content: "- "
+    }
+}
+
 .education-section span {
     position: absolute;
     right: 20px;
