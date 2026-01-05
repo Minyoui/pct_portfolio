@@ -17,7 +17,7 @@ function SubHero () {
                     <span>Projects Developed</span>
                 </div>
                 <div className='container'>
-                    <p>17</p>
+                    <p>21</p>
                     <span>Technology Stack</span>
                 </div>
             </div>
